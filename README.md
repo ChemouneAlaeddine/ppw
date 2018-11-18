@@ -1,8 +1,21 @@
-# ppw
-Projet de Programmation Web M2GL
+# Gestion des facultés de l'université
 
-Le projet consiste initialement à afficher une Map pour définir les facultés de l'université de Bordeaux et l'affectation des étudiants sur chacun de ces facultés.
+Une Appli web qui permet de gérer l'ensemble des facultés de l'enseignement supérieur à l'université de Bordeaux.
 
-Ensuite on peut afficher la liste des étudiants inscrits sur chaque université et leur date de naissance et leur pays origine et qu'on peut modifier leur information où supprimer un étudiant qui n'est plus inscrit dans l'université.
+## Description
 
-Et on va afficher les statistiques des étudiants concernant leur genre, type de Baccalauréat, job étudiant et le nombre d'étudiant inscrit dans l'université.
+* Le projet consiste initialement à afficher une Map pour définir les facultés de l'université de Bordeaux et l'affectation des étudiants sur chacune de ces facultés.
+
+* Ensuite on peut afficher plusieurs listes des branches d'une faculté, des groupes qui présententent l'ensemble des étudiants inscrits et leurs informations.
+
+* Et on va afficher les statistiques des étudiants concernant les résultats, type de Baccalauréat, job étudiant et la répartition des étudiants sur les facultés.
+
+
+## Outils de développement
+
+* [Vuejs](https://vuejs.org/) - Le framework utilisé Front-End
+* [Nodejs](https://nodejs.org/) - Serveur Back-End
+
+## Authors
+
+* **Alaeddine CHEMOUNE & Badr-Eddine FAIK**
