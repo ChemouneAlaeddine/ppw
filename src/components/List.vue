@@ -1,9 +1,31 @@
 <template>
-  <div>
-    <h1>une page de list</h1>
-  </div>
+  <b-table striped hover :items="items" :fields="fields"></b-table>
 </template>
 
 <script>
-export default { }
+import my_json from './../../api_tierces/data_example.json'
+export default {
+  data () {
+    return {
+      // Note 'isActive' is left out and will not appear in the rendered table
+      fields: {
+        name: {
+          label: 'name',
+          sortable: true
+        },
+        surname: {
+          label: 'surname',
+          sortable: false
+        },
+        float: {
+          label: 'moyenne'
+        },
+        'email': {
+          label: 'e-mail'
+        }
+      },
+      items: my_json.items
+    }
+  }
+}
 </script>
