@@ -5,6 +5,7 @@ import BootstrapVue from 'bootstrap-vue'
 import HomePage from './components/HomePage.vue'
 import List from './components/List.vue'
 import Stat from './components/Statistics.vue'
+import map from './components/map.vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -18,7 +19,8 @@ const router = new VueRouter({
 	routes: [
 		{path: '/', component: HomePage},
 		{path: '/list', component: List},
-		{path: '/stat', component: Stat}
+		{path: '/stat', component: Stat},
+		{path: '/map', component: map}
 	]
 })
 
