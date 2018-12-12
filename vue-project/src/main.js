@@ -1,9 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
+import BootstrapVue from 'bootstrap-vue'
 import HomePage from './components/HomePage.vue'
 import List from './components/List.vue'
 import Stat from './components/Statistics.vue'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(BootstrapVue);
 
 Vue.use(VueRouter)
 
