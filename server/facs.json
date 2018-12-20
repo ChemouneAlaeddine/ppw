@@ -2,13 +2,13 @@
 "campus": [
 {
 "index": 1,
-"longitude": 56,
-"laltitude": 2,
+"longitude": 41.8101,
+"laltitude": -0.6413,
 "name": "Talence-Pessac-Gradignan"
 },
 {
 "index": 1,
-"longitude": 56,
+"longitude": 41.5101,
 "laltitude": 2,
 "name": "Carreire"
 },

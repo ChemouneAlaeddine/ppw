@@ -2,7 +2,6 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue';
 import BootstrapVue from 'bootstrap-vue';
-import map from './components/map.vue';
 import HomePage from './components/HomePage.vue';
 import List from './components/List.vue';
 import Stat from './components/Statistics.vue';
@@ -21,8 +20,7 @@ const router = new VueRouter({
 		{path: '/', component: HomePage},
 		{path: '/list', component: List},
 		{path: '/campus', component: Campus},
-		{path: '/stat', component: Stat},
-		{path: '/map', component: map}
+		{path: '/stat', component: Stat}
 	]
 });
 
