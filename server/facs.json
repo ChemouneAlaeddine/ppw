@@ -1,0 +1,40 @@
+{
+"campus": [
+{
+"index": 1,
+"longitude": 56,
+"laltitude": 2,
+"name": "Talence-Pessac-Gradignan"
+},
+{
+"index": 1,
+"longitude": 56,
+"laltitude": 2,
+"name": "Carreire"
+},
+{
+"index": 1,
+"longitude": 56,
+"laltitude": 2,
+"name": "Bastide"
+},
+{
+"index": 1,
+"longitude": 56,
+"laltitude": 2,
+"name": "Sciences de la vigne et du vin"
+},
+{
+"index": 1,
+"longitude": 56,
+"laltitude": 2,
+"name": "Centre universitaire d agent"
+},
+{
+"index": 1,
+"longitude": 56,
+"laltitude": 2,
+"name": "Périgord"
+}
+]
+}

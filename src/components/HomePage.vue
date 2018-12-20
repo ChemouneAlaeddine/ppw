@@ -1,31 +1,41 @@
 <template>
   <div>
-  	<img src="./../assets/ub_maps.jpg" />
-    <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of the card's content.
-    </p>
+      <h1>map</h1>
+    <br>
+
+    <br>
     <b-button href="#" variant="primary">Go somewhere</b-button>
 </div>
 </template>
 
 <script>
+
+import axios from 'axios';
+
 export default {
   name: 'HomePage',
-  props: {
+  data() {
+    return {
+    }
   }
 }
+
 </script>
 
 <style scoped>
-h1 {
-  margin: 40px 0 0;
+h1,
+h2 {
+  font-weight: normal;
 }
-p {
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
   display: inline-block;
   margin: 0 10px;
 }
-img {
-	height: 600px;
-	width: 800px;
+a {
+  color: #42b983;
 }
 </style>

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import my_json from './../../api_tierces/data_example.json'
+import my_json from './../../server/test.json'
 export default {
   data () {
     return {
