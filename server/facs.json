@@ -2,39 +2,38 @@
 "campus": [
 {
 "index": 1,
-"longitude": 41.8101,
-"laltitude": -0.6413,
-"name": "Talence-Pessac-Gradignan"
+"longitude": 44.8091964,
+"laltitude": -0.5917126,
+"name": "Campus Talence",
+"desc": "sciences et technologies, droit"
 },
 {
 "index": 1,
-"longitude": 41.5101,
-"laltitude": 2,
-"name": "Carreire"
+"longitude": 44.8314684,
+"laltitude": -0.5707029,
+"name": "Campus Victoire",
+"desc": "Sciences de l'Homme"
 },
 {
 "index": 1,
-"longitude": 56,
-"laltitude": 2,
-"name": "Bastide"
+"longitude": 44.8231431,
+"laltitude": -0.6104924,
+"name": "Campus Carreire",
+"desc": "Santé et biologie"
 },
 {
 "index": 1,
-"longitude": 56,
-"laltitude": 2,
-"name": "Sciences de la vigne et du vin"
+"longitude": 44.7965668,
+"laltitude": -0.618446,
+"name": "Campus Pessac",
+"desc": "Science politique, économie et gestion"
 },
 {
 "index": 1,
-"longitude": 56,
-"laltitude": 2,
-"name": "Centre universitaire d agent"
-},
-{
-"index": 1,
-"longitude": 56,
-"laltitude": 2,
-"name": "Périgord"
+"longitude": 44.8451718,
+"laltitude": -0.5599641,
+"name": "Campus de la Bastide",
+"desc": "Sciences et gestion (PUSG)"
 }
 ]
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="map">
 </div>
 </template>
 
@@ -9,9 +9,8 @@ import axios from 'axios';
 import facs from './../../server/facs.json'
 
 export default {
-  name: 'HomePage',
   data () {
-  var mymap = L.map('mapid').setView([44.8101, -0.6413], 13);
+  var mymap = L.map('mapid').setView([44.8193401,-0.5956083], 13);
   
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
@@ -21,11 +20,13 @@ export default {
     id: 'mapbox.streets'
   }).addTo(mymap);
   
-  var longitude = facs.campus;
-  //L.marker([44.8101, -0.6413]).addTo(mymap)
-  //  .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-
-  mymap.on('click', onMapClick);
+  for (let i = 0; i < 6; i++) {
+      L.marker([facs.campus[i].longitude, facs.campus[i].laltitude]).addTo(mymap).bindPopup("<b>"+facs.campus[i].name+"</b>", {autoClose:false}).openPopup(); 
+  }
+  
+  return {
+    mymap
+  }
   }
 }
 </script>
