@@ -2,6 +2,8 @@
   <b-table striped hover :items="campus" :fields="fields"></b-table>
 </template>
 
+<!-- ============================================================================ -->
+
 <script>
 import facs from './../../server/facs.json'
 export default {
@@ -19,3 +21,5 @@ export default {
   }
 }
 </script>
+
+<!-- ============================================================================ -->

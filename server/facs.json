@@ -8,28 +8,28 @@
 "desc": "sciences et technologies, droit"
 },
 {
-"index": 1,
+"index": 2,
 "longitude": 44.8314684,
 "laltitude": -0.5707029,
 "name": "Campus Victoire",
 "desc": "Sciences de l'Homme"
 },
 {
-"index": 1,
+"index": 3,
 "longitude": 44.8231431,
 "laltitude": -0.6104924,
 "name": "Campus Carreire",
 "desc": "Santé et biologie"
 },
 {
-"index": 1,
+"index": 4,
 "longitude": 44.7965668,
 "laltitude": -0.618446,
 "name": "Campus Pessac",
 "desc": "Science politique, économie et gestion"
 },
 {
-"index": 1,
+"index": 5,
 "longitude": 44.8451718,
 "laltitude": -0.5599641,
 "name": "Campus de la Bastide",

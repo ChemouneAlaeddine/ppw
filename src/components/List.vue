@@ -2,6 +2,8 @@
   <b-table striped hover :items="items" :fields="fields"></b-table>
 </template>
 
+<!-- ============================================================================ -->
+
 <script>
 import my_json from './../../server/test.json'
 export default {

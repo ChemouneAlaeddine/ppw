@@ -3,6 +3,8 @@
 </div>
 </template>
 
+<!-- ============================================================================ -->
+
 <script>
 
 import axios from 'axios';
@@ -21,7 +23,8 @@ export default {
   }).addTo(mymap);
   
   for (let i = 0; i < 6; i++) {
-      L.marker([facs.campus[i].longitude, facs.campus[i].laltitude]).addTo(mymap).bindPopup("<b>"+facs.campus[i].name+"</b>", {autoClose:false}).openPopup(); 
+      let webPage = "/fac/"+facs.campus[i].index;
+      L.marker([facs.campus[i].longitude, facs.campus[i].laltitude]).on('click', function markerOnClick(){location.href = webPage;}).addTo(mymap).bindPopup("<a href="+webPage+">"+facs.campus[i].name+"</a>", {autoClose:false}).openPopup(); 
   }
   
   return {
@@ -30,6 +33,8 @@ export default {
   }
 }
 </script>
+
+<!-- ============================================================================ -->
 
 <style scoped>
 h1,h2 {font-weight: normal;}
