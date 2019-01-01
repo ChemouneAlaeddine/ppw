@@ -2,6 +2,14 @@
 
 Une Appli web qui permet de gérer l'ensemble des facultés de l'enseignement supérieur à l'université de Bordeaux.
 
+## Reste à faire
+* Implémentation des templates des facs (ajout des UF, des UE ...)
+* Création et implémentation des pages pour l'ajout et la modéfication de données
+* Une simple authentification (admin, admin) pour permettre la modification de données
+* Génération de données MongoDB
+* Statistiques
+* Swagger
+
 ## Description
 
 * Le projet consiste initialement à afficher une Map pour définir les facultés de l'université de Bordeaux et l'affectation des étudiants sur chacune de ces facultés.
