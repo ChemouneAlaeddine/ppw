@@ -1,5 +1,6 @@
 <template>
-  <b-table striped hover :items="items" :fields="fields"></b-table>
+  <div class="circular" v-bind:style="{ 'background-image': '/home/chemoune/Bureau/bck.jpg' }"></div>
+  <!-- b-table striped hover :items="items" :fields="fields"></b-table -->
 </template>
 
 <!-- ============================================================================ -->
