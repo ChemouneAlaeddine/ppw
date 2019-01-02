@@ -1,18 +1,17 @@
 <template>
-  <div id="map">
-</div>
+  <div id="mapid">
+  </div>
 </template>
 
 <!-- ============================================================================ -->
 
 <script>
-
 import axios from 'axios';
-import facs from './../../server/facs.json'
+import campus from './../../server/campus.json';
 
 export default {
   data () {
-  var mymap = L.map('mapid').setView([44.8193401,-0.5956083], 13);
+  var mapid = L.map('mapid').setView([44.8193401,-0.5956083], 13);
   
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
@@ -20,15 +19,14 @@ export default {
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.streets'
-  }).addTo(mymap);
+  }).addTo(mapid);
   
-  for (let i = 0; i < 6; i++) {
-      let webPage = "/fac/"+facs.campus[i].index;
-      L.marker([facs.campus[i].longitude, facs.campus[i].laltitude]).on('click', function markerOnClick(){location.href = webPage;}).addTo(mymap).bindPopup("<a href="+webPage+">"+facs.campus[i].name+"</a>", {autoClose:false}).openPopup(); 
+  for (let i in campus.campus) {
+      let webPage = "/fac/"+campus.campus[i].index;
+      L.marker([campus.campus[i].longitude, campus.campus[i].laltitude]).on('click', function markerOnClick(){location.href = webPage;}).addTo(mapid).bindPopup("<a href="+webPage+">"+campus.campus[i].name+"</a>", {autoClose:false}).openPopup(); 
   }
-  
   return {
-    mymap
+    mapid
   }
   }
 }
@@ -37,8 +35,5 @@ export default {
 <!-- ============================================================================ -->
 
 <style scoped>
-h1,h2 {font-weight: normal;}
-ul {list-style-type: none;padding: 0;}
-li {display: inline-block;margin: 0 10px;}
 a {color: #42b983;}
 </style>

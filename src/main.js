@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'jquery/dist/jquery.min.js';
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);

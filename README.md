@@ -5,6 +5,7 @@ Une Appli web qui permet de gérer l'ensemble des facultés de l'enseignement su
 ## Reste à faire
 * Implémentation des templates des facs (ajout des UF, des UE ...)
 * Création et implémentation des pages pour l'ajout et la modéfication de données
+* Création et implémentation d'une page profile pour chaque étudiant
 * Une simple authentification (admin, admin) pour permettre la modification de données
 * Génération de données MongoDB
 * Statistiques

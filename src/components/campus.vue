@@ -1,25 +1,37 @@
 <template>
-  <b-table striped hover :items="campus" :fields="fields"></b-table>
+  <b-table striped hover :items="campus" :fields="fields" @row-clicked="routerLinkToDetails">
+
+  <template slot="action" slot-scope="row">
+        <b-button size="sm" @row-clicked="routerLinkToDetails">Détails</b-button>
+  </template>
+
+  </b-table>
 </template>
 
 <!-- ============================================================================ -->
 
 <script>
-import facs from './../../server/facs.json'
+import campus from './../../server/campus.json'
 export default {
   data () {
     return {
-      // Note 'isActive' is left out and will not appear in the rendered table
       fields: {
-        name: {
-          label: 'name',
-          sortable: true
-        }
+        name: {label: 'name',sortable: true},
+        action: {label: 'Action'}
       },
-      campus: facs.campus
+      campus: campus.campus
     }
+  },
+  methods: {
+  routerLinkToDetails(record, index) {
+    this.$router.push({ path: '/fac/'+index });
+  }
   }
 }
 </script>
 
 <!-- ============================================================================ -->
+
+<style scoped>
+b-table{width:50%;}
+</style>
