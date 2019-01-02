@@ -5,7 +5,7 @@ const app = express();
 var path = require('path');
 
 var data = require('./test.json');
-var facs = require('./facs.json');
+var campus = require('./campus.json');
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
@@ -20,7 +20,7 @@ app.get('/data_s', function(req, res) {
 });
 
 app.get('/data_f', function(req, res) {
-  res.send(facs);
+  res.send(campus);
 });
 
 app.use(function(req, res, next){

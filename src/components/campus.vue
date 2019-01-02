@@ -1,7 +1,7 @@
 <template>
   <b-table striped hover :items="campus" :fields="fields" @row-clicked="routerLinkToDetails">
 
-  <template slot="action" slot-scope="row">
+  <template slot="action">
         <b-button size="sm" @row-clicked="routerLinkToDetails">Détails</b-button>
   </template>
 
