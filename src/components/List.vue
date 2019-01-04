@@ -36,6 +36,19 @@ export default {
       items: my_json.items
     }
   },
+  created() {
+    var mongo = require('mongodb');
+    var myBase3 = "mongodb://localhost:27017/myBase3";
+    console.log("1");
+    mongo.connect(myBase3 , (error , db) => {
+      console.log("2");
+      if (error){throw error;}
+      var dbase = db.db("myBase3");
+      db.collection("talence").find().toArray(function(err, results) {
+        console.log(results);
+      });
+    });
+  },
   methods: {
   routerLinkProfile(record, index) {
     this.$router.push({ path: '/profile/'+index+'/'+my_json.items[index].name+'/'+my_json.items[index].surname });

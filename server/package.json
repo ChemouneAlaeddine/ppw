@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "document-ready": "^2.0.2",
+    "express": "^4.16.4",
+    "mongodb": "^2.2.33"
   }
 }

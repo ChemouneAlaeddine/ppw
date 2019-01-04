@@ -1,0 +1,844 @@
+{
+"bio": [
+{
+"index": "1",
+"name": "Ronald",
+"surname": "Bradshaw",
+"email": "sandra@crane.uy",
+"fullname": "Leslie Hawley",
+"float": "8.2874"
+},
+{
+"index": "2",
+"name": "Gene",
+"surname": "Solomon",
+"email": "allen@yates.th",
+"fullname": "Luis Vick",
+"float": "8.8683"
+},
+{
+"index": "3",
+"name": "Emily",
+"surname": "Parsons",
+"email": "thelma@carlton.kr",
+"fullname": "Evelyn Bishop",
+"float": "14.3147"
+},
+{
+"index": "4",
+"name": "Renee",
+"surname": "Pitts",
+"email": "laura@ferrell.cl",
+"fullname": "Megan Davidson",
+"float": "11.7894"
+},
+{
+"index": "5",
+"name": "Bradley",
+"surname": "Richardson",
+"email": "willie@rosenthal.is",
+"fullname": "Lorraine Summers",
+"float": "11.7012"
+},
+{
+"index": "6",
+"name": "Frederick",
+"surname": "Singh",
+"email": "zachary@conrad.my",
+"fullname": "Natalie Choi",
+"float": "14.3155"
+},
+{
+"index": "7",
+"name": "Jessica",
+"surname": "Wong",
+"email": "steve@byrne.be",
+"fullname": "Louis Bruce",
+"float": "14.0071"
+},
+{
+"index": "8",
+"name": "Tracey",
+"surname": "Bolton",
+"email": "jacob@koch.sd",
+"fullname": "Henry Sawyer",
+"float": "13.2896"
+},
+{
+"index": "9",
+"name": "Samuel",
+"surname": "Gay",
+"email": "randy@lehman.py",
+"fullname": "Arlene Gallagher",
+"float": "10.7172"
+},
+{
+"index": "10",
+"name": "Guy",
+"surname": "Coble",
+"email": "katie@stone.py",
+"fullname": "Bonnie Sherrill",
+"float": "12.6954"
+},
+{
+"index": "11",
+"name": "Lucille",
+"surname": "Freeman",
+"email": "lynne@vick.io",
+"fullname": "Penny Joyce",
+"float": "9.5098"
+},
+{
+"index": "12",
+"name": "Norman",
+"surname": "Fisher",
+"email": "lewis@horn.ao",
+"fullname": "Wade Nixon",
+"float": "12.2623"
+},
+{
+"index": "13",
+"name": "Laura",
+"surname": "Baker",
+"email": "frederick@davidson.pg",
+"fullname": "Bob Hubbard",
+"float": "11.9623"
+},
+{
+"index": "14",
+"name": "Malcolm",
+"surname": "Gordon",
+"email": "kimberly@pierce.ir",
+"fullname": "Bernard Lucas",
+"float": "14.6228"
+},
+{
+"index": "15",
+"name": "Gloria",
+"surname": "Horowitz",
+"email": "harold@gay.cl",
+"fullname": "Hilda Hester",
+"float": "9.6843"
+},
+{
+"index": "16",
+"name": "Catherine",
+"surname": "Watts",
+"email": "willie@sutton.lr",
+"fullname": "Pat Joseph",
+"float": "13.5816"
+},
+{
+"index": "17",
+"name": "Terry",
+"surname": "Lowe",
+"email": "max@walters.kn",
+"fullname": "Ronald Bolton",
+"float": "14.2643"
+},
+{
+"index": "18",
+"name": "Jenny",
+"surname": "Graves",
+"email": "allison@chandler.gp",
+"fullname": "Hazel Hartman",
+"float": "14.3447"
+},
+{
+"index": "19",
+"name": "Russell",
+"surname": "High",
+"email": "courtney@turner.gu",
+"fullname": "Ashley Wilkerson",
+"float": "9.3157"
+},
+{
+"index": "20",
+"name": "Frances",
+"surname": "Diaz",
+"email": "geoffrey@beatty.wf",
+"fullname": "Jessica Wong",
+"float": "8.6276"
+},
+{
+"index": "21",
+"name": "Sharon",
+"surname": "Huffman",
+"email": "lewis@nelson.mu",
+"fullname": "Ross Rosenberg",
+"float": "8.2384"
+},
+{
+"index": "22",
+"name": "Marilyn",
+"surname": "McLean",
+"email": "milton@moore.ni",
+"fullname": "Lee Black",
+"float": "8.9041"
+},
+{
+"index": "23",
+"name": "Marsha",
+"surname": "Blackburn",
+"email": "bobby@underwood.sx",
+"fullname": "Kyle Bowles",
+"float": "12.6238"
+},
+{
+"index": "24",
+"name": "Jenny",
+"surname": "Underwood",
+"email": "elsie@weeks.mm",
+"fullname": "Christina Nelson",
+"float": "10.6382"
+},
+{
+"index": "25",
+"name": "Glenda",
+"surname": "Tyson",
+"email": "oscar@lucas.la",
+"fullname": "Nathan Roth",
+"float": "14.5994"
+},
+{
+"index": "26",
+"name": "Randall",
+"surname": "Hines",
+"email": "stephen@dyer.gw",
+"fullname": "Donna Arthur",
+"float": "14.8446"
+},
+{
+"index": "27",
+"name": "Willie",
+"surname": "Chung",
+"email": "helen@sherrill.ug",
+"fullname": "Stephanie Warren",
+"float": "10.6012"
+},
+{
+"index": "28",
+"name": "Sheryl",
+"surname": "Underwood",
+"email": "tonya@singleton.je",
+"fullname": "Barbara Branch",
+"float": "14.6656"
+},
+{
+"index": "29",
+"name": "Joseph",
+"surname": "Bolton",
+"email": "arnold@weeks.cu",
+"fullname": "Vincent McCall",
+"float": "14.3151"
+},
+{
+"index": "30",
+"name": "Samantha",
+"surname": "Cook",
+"email": "nina@klein.md",
+"fullname": "Jennifer Fink",
+"float": "12.1298"
+},
+{
+"index": "31",
+"name": "Neal",
+"surname": "Houston",
+"email": "keith@currie.es",
+"fullname": "Geoffrey Bradley",
+"float": "10.114"
+},
+{
+"index": "32",
+"name": "Jim",
+"surname": "Anthony",
+"email": "chris@monroe.ch",
+"fullname": "Juan Hill",
+"float": "14.4898"
+},
+{
+"index": "33",
+"name": "Courtney",
+"surname": "Harrell",
+"email": "sherri@mcintosh.za",
+"fullname": "Malcolm Knight",
+"float": "8.0258"
+},
+{
+"index": "34",
+"name": "Maurice",
+"surname": "Payne",
+"email": "hannah@morris.je",
+"fullname": "Ann Love",
+"float": "13.2928"
+},
+{
+"index": "35",
+"name": "Lester",
+"surname": "Lawson",
+"email": "mark@simmons.kr",
+"fullname": "Glen Baker",
+"float": "11.774"
+},
+{
+"index": "36",
+"name": "Stephen",
+"surname": "Hartman",
+"email": "roger@coley.ke",
+"fullname": "Jose Ellis",
+"float": "9.2783"
+},
+{
+"index": "37",
+"name": "Helen",
+"surname": "Moon",
+"email": "kelly@hill.bm",
+"fullname": "Paige Cooke",
+"float": "10.1179"
+},
+{
+"index": "38",
+"name": "Audrey",
+"surname": "Dawson",
+"email": "donna@hoover.sr",
+"fullname": "Tom Spivey",
+"float": "10.8402"
+},
+{
+"index": "39",
+"name": "Joanna",
+"surname": "Galloway",
+"email": "matthew@kane.pe",
+"fullname": "Katherine Pollard",
+"float": "11.5281"
+},
+{
+"index": "40",
+"name": "Gayle",
+"surname": "Pitts",
+"email": "lester@coleman.eg",
+"fullname": "Renee Vaughan",
+"float": "13.1557"
+},
+{
+"index": "41",
+"name": "Vernon",
+"surname": "Brantley",
+"email": "leo@eason.cm",
+"fullname": "Curtis Weiner",
+"float": "9.5722"
+},
+{
+"index": "42",
+"name": "Bradley",
+"surname": "Scarborough",
+"email": "caroline@honeycutt.cm",
+"fullname": "Rita Desai",
+"float": "8.5677"
+},
+{
+"index": "43",
+"name": "Franklin",
+"surname": "Hendrix",
+"email": "eric@robinson.bb",
+"fullname": "Debra Sims",
+"float": "11.9015"
+},
+{
+"index": "44",
+"name": "Ronnie",
+"surname": "Underwood",
+"email": "dianne@blackburn.na",
+"fullname": "Janice Stout",
+"float": "10.8712"
+},
+{
+"index": "45",
+"name": "Nelson",
+"surname": "Joyce",
+"email": "audrey@hansen.st",
+"fullname": "Karen Nichols",
+"float": "14.3813"
+},
+{
+"index": "46",
+"name": "Karen",
+"surname": "Daniel",
+"email": "dolores@lam.cl",
+"fullname": "Jeff Franklin",
+"float": "11.4577"
+},
+{
+"index": "47",
+"name": "Kyle",
+"surname": "Vaughn",
+"email": "cecil@hamrick.gi",
+"fullname": "Harriet Jordan",
+"float": "13.4685"
+},
+{
+"index": "48",
+"name": "Alex",
+"surname": "McLaughlin",
+"email": "cheryl@wallace.fr",
+"fullname": "Jeanne Langston",
+"float": "13.8923"
+},
+{
+"index": "49",
+"name": "Aaron",
+"surname": "Ellis",
+"email": "justin@branch.mt",
+"fullname": "Jenny Case",
+"float": "13.2973"
+},
+{
+"index": "50",
+"name": "Jim",
+"surname": "Walton",
+"email": "katherine@lowry.ht",
+"fullname": "Elaine Duke",
+"float": "11.6707"
+},
+{
+"index": "51",
+"name": "Tom",
+"surname": "Payne",
+"email": "randall@russell.tk",
+"fullname": "Troy Lindsay",
+"float": "9.5559"
+},
+{
+"index": "52",
+"name": "Claire",
+"surname": "O",
+"email": "hazel@dunlap.sl",
+"fullname": "Catherine Davis",
+"float": "14.3258"
+},
+{
+"index": "53",
+"name": "Jeanette",
+"surname": "Hunt",
+"email": "bob@joseph.at",
+"fullname": "Eva Raynor",
+"float": "14.7189"
+},
+{
+"index": "54",
+"name": "Darlene",
+"surname": "McGuire",
+"email": "jeremy@choi.ax",
+"fullname": "Theresa Dale",
+"float": "10.5748"
+},
+{
+"index": "55",
+"name": "Betty",
+"surname": "Kern",
+"email": "tina@watson.as",
+"fullname": "Karen Pollard",
+"float": "8.5743"
+},
+{
+"index": "56",
+"name": "Grace",
+"surname": "Walter",
+"email": "kathy@long.af",
+"fullname": "Wallace McMahon",
+"float": "8.5707"
+},
+{
+"index": "57",
+"name": "Justin",
+"surname": "Henson",
+"email": "lynn@knight.al",
+"fullname": "Sean Mack",
+"float": "14.9678"
+},
+{
+"index": "58",
+"name": "Neal",
+"surname": "Warren",
+"email": "dawn@payne.kz",
+"fullname": "Hannah Kirby",
+"float": "13.7196"
+},
+{
+"index": "59",
+"name": "Martin",
+"surname": "Cooke",
+"email": "jack@bradley.zm",
+"fullname": "Rhonda Davies",
+"float": "14.7534"
+},
+{
+"index": "60",
+"name": "Keith",
+"surname": "Katz",
+"email": "chris@anthony.re",
+"fullname": "Dianne Pitts",
+"float": "9.8441"
+},
+{
+"index": "61",
+"name": "Jeremy",
+"surname": "Gill",
+"email": "lynne@sanchez.ms",
+"fullname": "Bonnie Hess",
+"float": "9.6106"
+},
+{
+"index": "62",
+"name": "Gayle",
+"surname": "Branch",
+"email": "danielle@berger.tl (changed from tp)",
+"fullname": "Miriam Barr",
+"float": "10.3479"
+},
+{
+"index": "63",
+"name": "Clifford",
+"surname": "Wilkerson",
+"email": "robyn@sparks.gn",
+"fullname": "Lucille Puckett",
+"float": "8.9581"
+},
+{
+"index": "64",
+"name": "Leroy",
+"surname": "Sharma",
+"email": "claire@savage.ec",
+"fullname": "Douglas Burgess",
+"float": "10.3718"
+},
+{
+"index": "65",
+"name": "Sarah",
+"surname": "Denton",
+"email": "william@boswell.ru",
+"fullname": "Jordan Wang",
+"float": "10.1908"
+},
+{
+"index": "66",
+"name": "Jean",
+"surname": "Coley",
+"email": "lucille@robertson.et",
+"fullname": "Vincent House",
+"float": "13.8478"
+},
+{
+"index": "67",
+"name": "Lois",
+"surname": "Glover",
+"email": "crystal@bowers.ml",
+"fullname": "Sarah Boswell",
+"float": "13.5401"
+},
+{
+"index": "68",
+"name": "Gwendolyn",
+"surname": "Barber",
+"email": "tonya@zimmerman.si",
+"fullname": "Carl Quinn",
+"float": "13.2051"
+},
+{
+"index": "69",
+"name": "Kathleen",
+"surname": "Sawyer",
+"email": "stephanie@watson.sm",
+"fullname": "Barry Currin",
+"float": "14.8145"
+},
+{
+"index": "70",
+"name": "Ronnie",
+"surname": "Rowe",
+"email": "nancy@barr.iq",
+"fullname": "Monica Lindsay",
+"float": "9.3737"
+},
+{
+"index": "71",
+"name": "Nancy",
+"surname": "Hodge",
+"email": "dana@davidson.mu",
+"fullname": "Melinda Peterson",
+"float": "14.6632"
+},
+{
+"index": "72",
+"name": "Eva",
+"surname": "Eason",
+"email": "luis@nash.org",
+"fullname": "Dennis Coleman",
+"float": "11.4317"
+},
+{
+"index": "73",
+"name": "Neil",
+"surname": "Bradley",
+"email": "ronald@bowden.jm",
+"fullname": "Juan Fisher",
+"float": "10.2704"
+},
+{
+"index": "74",
+"name": "Jill",
+"surname": "Dunn",
+"email": "lauren@fisher.bv",
+"fullname": "Arlene Vaughan",
+"float": "10.6887"
+},
+{
+"index": "75",
+"name": "Jessica",
+"surname": "Sumner",
+"email": "julie@brown.mq",
+"fullname": "Allen Ayers",
+"float": "8.6854"
+},
+{
+"index": "76",
+"name": "Marshall",
+"surname": "Dalton",
+"email": "cecil@kelley.mo",
+"fullname": "Jessica Bowers",
+"float": "9.0435"
+},
+{
+"index": "77",
+"name": "Stephanie",
+"surname": "Monroe",
+"email": "sean@leach.cx",
+"fullname": "Dorothy Daniel",
+"float": "8.013"
+},
+{
+"index": "78",
+"name": "Lester",
+"surname": "Beck",
+"email": "audrey@burnette.no",
+"fullname": "Don Simpson",
+"float": "14.7532"
+},
+{
+"index": "79",
+"name": "Lewis",
+"surname": "Beatty",
+"email": "jack@lamb.pl",
+"fullname": "Joanne Caldwell",
+"float": "10.3256"
+},
+{
+"index": "80",
+"name": "William",
+"surname": "Blackwell",
+"email": "frances@graves.ne",
+"fullname": "Harold Barton",
+"float": "12.0994"
+},
+{
+"index": "81",
+"name": "Bradley",
+"surname": "McCormick",
+"email": "angela@jiang.th",
+"fullname": "Sarah James",
+"float": "10.8183"
+},
+{
+"index": "82",
+"name": "Jose",
+"surname": "McMahon",
+"email": "lester@blackburn.bs",
+"fullname": "Stacy Turner",
+"float": "9.982"
+},
+{
+"index": "83",
+"name": "Marion",
+"surname": "James",
+"email": "jeff@warren.lu",
+"fullname": "Lynda Lam",
+"float": "10.8874"
+},
+{
+"index": "84",
+"name": "Willie",
+"surname": "Wang",
+"email": "eugene@moss.bd",
+"fullname": "Christina Coates",
+"float": "9.2447"
+},
+{
+"index": "85",
+"name": "Vicki",
+"surname": "Eason",
+"email": "jack@fox.si",
+"fullname": "Toni Carver",
+"float": "9.6068"
+},
+{
+"index": "86",
+"name": "Renee",
+"surname": "Barton",
+"email": "diana@chandler.ar",
+"fullname": "Jordan Rosenberg",
+"float": "10.1246"
+},
+{
+"index": "87",
+"name": "Martin",
+"surname": "Barton",
+"email": "warren@scarborough.ly",
+"fullname": "Guy Hayes",
+"float": "10.2919"
+},
+{
+"index": "88",
+"name": "Eric",
+"surname": "Crabtree",
+"email": "harvey@mcpherson.re",
+"fullname": "Brett Blum",
+"float": "10.6836"
+},
+{
+"index": "89",
+"name": "Faye",
+"surname": "Britt",
+"email": "maureen@adcock.no",
+"fullname": "Calvin Teague",
+"float": "14.9264"
+},
+{
+"index": "90",
+"name": "Douglas",
+"surname": "Byrne",
+"email": "roy@bowles.vc",
+"fullname": "Luis Heller",
+"float": "13.7469"
+},
+{
+"index": "91",
+"name": "Gayle",
+"surname": "Little",
+"email": "sidney@kelly.kg",
+"fullname": "Hannah Jernigan",
+"float": "13.3909"
+},
+{
+"index": "92",
+"name": "Lynda",
+"surname": "McIntyre",
+"email": "susan@woodard.gl",
+"fullname": "Sidney Love",
+"float": "10.8396"
+},
+{
+"index": "93",
+"name": "Lauren",
+"surname": "Hansen",
+"email": "keith@black.gn",
+"fullname": "Vincent Fisher",
+"float": "14.9842"
+},
+{
+"index": "94",
+"name": "Marcus",
+"surname": "Branch",
+"email": "george@ellis.py",
+"fullname": "Holly Byers",
+"float": "10.6689"
+},
+{
+"index": "95",
+"name": "Patricia",
+"surname": "Harrell",
+"email": "jason@strickland.ro",
+"fullname": "Beth Underwood",
+"float": "8.5849"
+},
+{
+"index": "96",
+"name": "Alvin",
+"surname": "Clarke",
+"email": "shawn@frederick.gd",
+"fullname": "Malcolm Barbour",
+"float": "11.5879"
+},
+{
+"index": "97",
+"name": "Gina",
+"surname": "Farrell",
+"email": "kevin@chang.ar",
+"fullname": "Glen Richmond",
+"float": "8.3232"
+},
+{
+"index": "98",
+"name": "Shannon",
+"surname": "Dunn",
+"email": "clyde@lassiter.lt",
+"fullname": "Jesse Barton",
+"float": "14.1681"
+},
+{
+"index": "99",
+"name": "Ashley",
+"surname": "Hirsch",
+"email": "kent@abbott.ht",
+"fullname": "Hazel Long",
+"float": "10.0543"
+},
+{
+"index": "100",
+"name": "Tara",
+"surname": "Byers",
+"email": "karen@harris.ua",
+"fullname": "Stacy Stanton",
+"float": "12.5015"
+},
+{
+"index": "101",
+"name": "Todd",
+"surname": "Cherry",
+"email": "gilbert@robinson.hr",
+"fullname": "Kathy Yates",
+"float": "11.005"
+},
+{
+"index": "102",
+"name": "Judith",
+"surname": "Hood",
+"email": "sue@holmes.ug",
+"fullname": "Charlene Lindsay",
+"float": "13.7791"
+},
+{
+"index": "103",
+"name": "Hannah",
+"surname": "McIntosh",
+"email": "derek@cobb.om",
+"fullname": "Kristin Finch",
+"float": "12.2871"
+},
+{
+"index": "104",
+"name": "Linda",
+"surname": "Beatty",
+"email": "natalie@baldwin.np",
+"fullname": "Nancy Mullen",
+"float": "8.5194"
+},
+{
+"index": "105",
+"name": "Jeanne",
+"surname": "Pate",
+"email": "curtis@reed.bb",
+"fullname": "Sue Pridgen",
+"float": "13.8326"
+}
+]
+}
