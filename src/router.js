@@ -5,6 +5,7 @@ import Stat from './components/Statistics.vue';
 import Campus from './components/campus.vue';
 import fac from './components/fac.vue';
 import profile from './components/profile.vue';
+import Form from './components/addetudiant.vue';
 
 export default new Router({
 	mode: 'history',
@@ -13,5 +14,6 @@ export default new Router({
 	{path: '/campus', component: Campus},
 	{path: '/stat', component: Stat},
 	{path: '/profile/:id/:name/:surname?', component: profile},
-	{path: '/fac/:id?', component: fac}]
+	{path: '/fac/:id?', component: fac},
+	{path: '/form', component: Form}]
 });

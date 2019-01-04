@@ -79,8 +79,14 @@ app.get('/psych', function(req, res, next) {res.send(psych);});
 app.get('/se', function(req, res, next) {res.send(se);});
 app.get('/socio', function(req, res, next) {res.send(socio);});
 app.get('/speg', function(req, res, next) {res.send(speg);});
-
-
+app.post('http://localhost:3000/addit', function (req, res) {
+	  var users={
+		"name":req.body.name,
+		"surname":req.body.surname,
+		"email":req.body.email,
+		"password":req.body.password
+	  }
+})
 // Création de la BDD
 var ourData = "mongodb://localhost:27017/ourData";
 
