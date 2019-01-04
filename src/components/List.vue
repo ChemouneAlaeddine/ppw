@@ -12,7 +12,7 @@
 
 <script>
 import my_json from './../../server/test.json';
-import $ from 'jquery';
+//import $ from 'jquery';
 
 export default {
   data () {
