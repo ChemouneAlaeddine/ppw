@@ -1,5 +1,5 @@
 <template>
-  <b-table striped hover :items="items" :fields="fields" @row-clicked="routerLinkProfile">
+  <b-table striped hover :items="array" :fields="fields" @row-clicked="routerLinkProfile">
 
   <template slot="action">
           <b-button size="sm" @row-clicked="routerLinkProfile">Profile</b-button>
@@ -11,7 +11,7 @@
 <!-- ============================================================================ -->
 
 <script>
-import my_json from './../../server/test.json';
+//import my_json from './../../server/test.json';
 //import $ from 'jquery';
 
 export default {
@@ -34,18 +34,20 @@ export default {
         },
         action: {label: 'Action'}
       },
-      items: my_json.items
+      array: [0]
     }
   },
   created() {
     this.$http.get("http://localhost:3000/it")
             .then(response => {
-                console.log(response);
+                this.array = response.body.it;
     });
+    var i = this.$route.params.id;
+    console.log("valeur "+i);
   },
   methods: {
   routerLinkProfile(record, index) {
-    this.$router.push({ path: '/profile/'+index+'/'+my_json.items[index].name+'/'+my_json.items[index].surname });
+    this.$router.push({ path: '/profile/'+index+'/'+this.array[index].name+'/'+this.array[index].surname });
   }
   }
 }

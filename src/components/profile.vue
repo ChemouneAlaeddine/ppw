@@ -40,9 +40,9 @@ export default {
       this.email = my_json.items[i].email;
       this.moyenne = my_json.items[i].float;
       
-      if((i != my_json.items[i].id)||(this.$route.params.name != my_json.items[i].name)||(this.$route.params.surname != my_json.items[i].surname)) {
+      /*if((i != my_json.items[i].id)||(this.$route.params.name != my_json.items[i].name)||(this.$route.params.surname != my_json.items[i].surname)) {
           console.log("erreur d identification");
-      }
+      }*/
   }
   }
 </script>

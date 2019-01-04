@@ -34,7 +34,7 @@ export default {
   },
   methods: {
   routerLinkToDetails(record, index) {
-    this.$router.push({ path: '/list' });
+    this.$router.push({ path: '/list/'+index });
   }
   }
 }

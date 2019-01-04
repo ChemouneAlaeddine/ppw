@@ -9,7 +9,7 @@ import profile from './components/profile.vue';
 export default new Router({
 	mode: 'history',
 	routes: [{path: '/', component: HomePage},
-	{path: '/list', component: List},
+	{path: '/list/:id?', component: List},
 	{path: '/campus', component: Campus},
 	{path: '/stat', component: Stat},
 	{path: '/profile/:id/:name/:surname?', component: profile},
