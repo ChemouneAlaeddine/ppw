@@ -11,11 +11,12 @@
 <!-- ============================================================================ -->
 
 <script>
-import my_json from './../../server/test.json'
+import my_json from './../../server/test.json';
+import $ from 'jquery';
+
 export default {
   data () {
     return {
-      // Note 'isActive' is left out and will not appear in the rendered table
       fields: {
         name: {
           label: 'name',
@@ -37,16 +38,9 @@ export default {
     }
   },
   created() {
-    var mongo = require('mongodb');
-    var myBase3 = "mongodb://localhost:27017/myBase3";
-    console.log("1");
-    mongo.connect(myBase3 , (error , db) => {
-      console.log("2");
-      if (error){throw error;}
-      var dbase = db.db("myBase3");
-      db.collection("talence").find().toArray(function(err, results) {
-        console.log(results);
-      });
+    this.$http.get("http://localhost:3000/it")
+            .then(response => {
+                console.log(response);
     });
   },
   methods: {

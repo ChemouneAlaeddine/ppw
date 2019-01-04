@@ -2,6 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router.js';
 import VueRouter from 'vue-router';
+import Resource from 'vue-resource';
+//import mongodb from 'mongodb';
+//import mongoose from 'mongoose';
 
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -10,6 +13,7 @@ import 'jquery/dist/jquery.min.js';
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
+Vue.use(Resource);
 
 new Vue({
   router,

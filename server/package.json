@@ -9,8 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "document-ready": "^2.0.2",
     "express": "^4.16.4",
     "mongodb": "^2.2.33"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
   }
 }

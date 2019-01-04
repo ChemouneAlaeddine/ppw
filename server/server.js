@@ -1,7 +1,9 @@
-const express = require('express');
-const app = express();
-const mongo = require('mongodb');
-const path = require('path');
+var express = require('express');
+var app = express();
+var mongo = require('mongodb');
+var path = require('path');
+var cors = require('cors');
+
 
 // Fichiers json
 var data = require('./test.json');
@@ -36,41 +38,54 @@ var se = require('./data/victoire/se.json');
 var socio = require('./data/victoire/socio.json');
 var speg = require('./data/victoire/speg.json');
 
+/*app.use(cors({
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}));*/
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // Page serveur
-app.get('/', function(req, res) {res.sendFile(path.join(__dirname + '/index.html'));});
+app.get('/', function(req, res, next) {res.sendFile(path.join(__dirname + '/index.html'));});
 
 // Pages json
-app.get('/data_s', function(req, res) {res.send(data);});
-app.get('/data_f', function(req, res) {res.send(campus);});
+app.get('/data_s', function(req, res, next) {res.send(data);});
+app.get('/data_f', function(req, res, next) {res.send(campus);});
 
-app.get('/ega1', function(req, res) {res.send(ega1);});
-app.get('/iae', function(req, res) {res.send(iae);});
-app.get('/iut', function(req, res) {res.send(iut);});
+app.get('/ega1', function(req, res, next) {res.send(ega1);});
+app.get('/iae', function(req, res, next) {res.send(iae);});
+app.get('/iut', function(req, res, next) {res.send(iut);});
 
-app.get('/sm', function(req, res) {res.send(sm);});
-app.get('/sp', function(req, res) {res.send(sp);});
-app.get('/spe', function(req, res) {res.send(spe);});
-app.get('/sv', function(req, res) {res.send(sv);});
+app.get('/sm', function(req, res, next) {res.send(sm);});
+app.get('/sp', function(req, res, next) {res.send(sp);});
+app.get('/spe', function(req, res, next) {res.send(spe);});
+app.get('/sv', function(req, res, next) {res.send(sv);});
 
-app.get('/dsp', function(req, res) {res.send(dsp);});
-app.get('/ega2', function(req, res) {res.send(ega2);});
-app.get('/it', function(req, res) {res.send(it);});
-app.get('/staps', function(req, res) {res.send(staps);});
+app.get('/dsp', function(req, res, next) {res.send(dsp);});
+app.get('/ega2', function(req, res, next) {res.send(ega2);});
+app.get('/it', function(req, res, next) {res.send(it);});
+app.get('/staps', function(req, res, next) {res.send(staps);});
 
-app.get('/bio', function(req, res) {res.send(bio);});
-app.get('/chimie', function(req, res) {res.send(chimie);});
-app.get('/info', function(req, res) {res.send(info);});
-app.get('/math', function(req, res) {res.send(math);});
-app.get('/phy', function(req, res) {res.send(phy);});
-app.get('/si', function(req, res) {res.send(si);});
-app.get('/ste', function(req, res) {res.send(ste);});
+app.get('/bio', function(req, res, next) {res.send(bio);});
+app.get('/chimie', function(req, res, next) {res.send(chimie);});
+app.get('/info', function(req, res, next) {res.send(info);});
+app.get('/math', function(req, res, next) {res.send(math);});
+app.get('/phy', function(req, res, next) {res.send(phy);});
+app.get('/si', function(req, res, next) {res.send(si);});
+app.get('/ste', function(req, res, next) {res.send(ste);});
 
-app.get('/as', function(req, res) {res.send(as);});
-app.get('/odon', function(req, res) {res.send(odon);});
-app.get('/psych', function(req, res) {res.send(psych);});
-app.get('/se', function(req, res) {res.send(se);});
-app.get('/socio', function(req, res) {res.send(socio);});
-app.get('/speg', function(req, res) {res.send(speg);});
+app.get('/as', function(req, res, next) {res.send(as);});
+app.get('/odon', function(req, res, next) {res.send(odon);});
+app.get('/psych', function(req, res, next) {res.send(psych);});
+app.get('/se', function(req, res, next) {res.send(se);});
+app.get('/socio', function(req, res, next) {res.send(socio);});
+app.get('/speg', function(req, res, next) {res.send(speg);});
 
 
 // Création de la BDD
