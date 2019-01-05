@@ -51,42 +51,44 @@ app.get('/', function(req, res, next) {res.sendFile(path.join(__dirname + '/inde
 app.get('/data_s', function(req, res, next) {res.send(data);});
 app.get('/data_f', function(req, res, next) {res.send(campus);});
 
-app.get('/ega1', function(req, res, next) {res.send(ega1);});
-app.get('/iae', function(req, res, next) {res.send(iae);});
-app.get('/iut', function(req, res, next) {res.send(iut);});
+app.get('/5/0', function(req, res, next) {res.send(iae);});
+app.get('/5/1', function(req, res, next) {res.send(ega1);});
+app.get('/5/2', function(req, res, next) {res.send(iut);});
 
-app.get('/sm', function(req, res, next) {res.send(sm);});
-app.get('/sp', function(req, res, next) {res.send(sp);});
-app.get('/spe', function(req, res, next) {res.send(spe);});
-app.get('/sv', function(req, res, next) {res.send(sv);});
+app.get('/3/0', function(req, res, next) {res.send(sm);});
+app.get('/3/1', function(req, res, next) {res.send(sp);});
+app.get('/3/2', function(req, res, next) {res.send(sv);});
+app.get('/3/3', function(req, res, next) {res.send(spe);});
 
-app.get('/dsp', function(req, res, next) {res.send(dsp);});
-app.get('/ega2', function(req, res, next) {res.send(ega2);});
-app.get('/it', function(req, res, next) {res.send(it);});
-app.get('/staps', function(req, res, next) {res.send(staps);});
+app.get('/4/0', function(req, res, next) {res.send(dsp);});
+app.get('/4/1', function(req, res, next) {res.send(ega2);});
+app.get('/4/2', function(req, res, next) {res.send(it);});
+app.get('/4/3', function(req, res, next) {res.send(staps);});
 
-app.get('/bio', function(req, res, next) {res.send(bio);});
-app.get('/chimie', function(req, res, next) {res.send(chimie);});
-app.get('/info', function(req, res, next) {res.send(info);});
-app.get('/math', function(req, res, next) {res.send(math);});
-app.get('/phy', function(req, res, next) {res.send(phy);});
-app.get('/si', function(req, res, next) {res.send(si);});
-app.get('/ste', function(req, res, next) {res.send(ste);});
+app.get('/1/0', function(req, res, next) {res.send(bio);});
+app.get('/1/1', function(req, res, next) {res.send(chimie);});
+app.get('/1/2', function(req, res, next) {res.send(info);});
+app.get('/1/3', function(req, res, next) {res.send(math);});
+app.get('/1/4', function(req, res, next) {res.send(phy);});
+app.get('/1/5', function(req, res, next) {res.send(si);});
+app.get('/1/6', function(req, res, next) {res.send(ste);});
 
-app.get('/as', function(req, res, next) {res.send(as);});
-app.get('/odon', function(req, res, next) {res.send(odon);});
-app.get('/psych', function(req, res, next) {res.send(psych);});
-app.get('/se', function(req, res, next) {res.send(se);});
-app.get('/socio', function(req, res, next) {res.send(socio);});
-app.get('/speg', function(req, res, next) {res.send(speg);});
-app.post('http://localhost:3000/addit', function (req, res) {
+app.get('/2/0', function(req, res, next) {res.send(as);});
+app.get('/2/1', function(req, res, next) {res.send(psych);});
+app.get('/2/2', function(req, res, next) {res.send(se);});
+app.get('/2/3', function(req, res, next) {res.send(socio);});
+app.get('/2/4', function(req, res, next) {res.send(odon);});
+app.get('/2/5', function(req, res, next) {res.send(speg);});
+
+/*app.post('http://localhost:3000/addit', function (req, res) {
 	  var users={
 		"name":req.body.name,
 		"surname":req.body.surname,
 		"email":req.body.email,
 		"password":req.body.password
 	  }
-})
+})*/
+
 // Création de la BDD
 var ourData = "mongodb://localhost:27017/ourData";
 

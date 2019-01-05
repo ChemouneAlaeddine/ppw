@@ -4,6 +4,7 @@
   <template slot="action">
           <b-button size="sm" @row-clicked="routerLinkProfile">Profile</b-button>
     </template>
+
     </b-table>
 
 </template>
@@ -38,17 +39,20 @@ export default {
     }
   },
   created() {
-    this.$http.get("http://localhost:3000/it")
+    var i = this.$route.params.id1;
+    var j = this.$route.params.id2;
+
+    this.$http.get("http://localhost:3000/"+i+"/"+j)
             .then(response => {
-                this.array = response.body.it;
+                this.array = response.body.students;
     });
-    var i = this.$route.params.id;
-    console.log("valeur "+i);
   },
   methods: {
   routerLinkProfile(record, index) {
     this.$router.push({ path: '/profile/'+index+'/'+this.array[index].name+'/'+this.array[index].surname });
+
   }
+
   }
 }
 </script>

@@ -1,14 +1,35 @@
 <template>
-  <div>
-      <h1>Profile</h1>
-      <h1>{{ id }}</h1>
-      <h1>{{ id }}</h1>
-      <h1>{{ nom }}</h1>
-      <h1>{{ prenom }}</h1>
-      <h1>{{ nom_complet }}</h1>
-      <h1>{{ email }}</h1>
-      <h1>{{ moyenne }}</h1>
-  </div>
+<div>
+<center>
+  <h1>Profile de {{ prenom }} {{ nom }} </h1>
+  <br>
+  <br>
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th>index</th>
+    <td>{{ id }}</td>
+    </tr>
+    <tr>
+       <th>name</th>
+       <td>{{ nom }}</td>
+    </tr>
+    <tr>
+     <th>surname</th>
+    <td>{{ prenom }}</td>
+    </tr>
+    <tr>
+     <th>email</th>
+    <td>{{ email }}</td>
+    </tr>
+    <tr>
+     <th>note</th>
+    <td>{{ moyenne }}</td>
+    </tr>
+  </tbody>
+</table>
+</center>  
+</div>  
 </template>
 
 <!-- ============================================================================ -->
@@ -16,7 +37,6 @@
 <script>
 
 import my_json from './../../server/test.json';
-import $ from 'jquery';
 
 export default {
   data () {
@@ -33,7 +53,7 @@ export default {
 
       var i = this.$route.params.id;
 
-      this.id = my_json.items[i].id;
+      this.id = my_json.items[i].index;
       this.nom = my_json.items[i].name;
       this.prenom = my_json.items[i].surname;
       this.nom_complet = my_json.items[i].fullname;

@@ -17,7 +17,7 @@ import campus from './../../server/campus.json';
 import $ from 'jquery';
 
 //var i = this.$route.params.id - 1;
-
+ 
 export default {
   data () {
     return {
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
   routerLinkToDetails(record, index) {
-    this.$router.push({ path: '/list/'+index });
+    this.$router.push({ path: this.$route.params.id+'/list/'+index });
   }
   }
 }

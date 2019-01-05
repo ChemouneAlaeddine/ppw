@@ -10,7 +10,7 @@ import Form from './components/addetudiant.vue';
 export default new Router({
 	mode: 'history',
 	routes: [{path: '/', component: HomePage},
-	{path: '/list/:id?', component: List},
+	{path: '/fac/:id1?/list/:id2?', component: List},
 	{path: '/campus', component: Campus},
 	{path: '/stat', component: Stat},
 	{path: '/profile/:id/:name/:surname?', component: profile},
