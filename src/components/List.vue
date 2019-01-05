@@ -4,6 +4,7 @@
   <template slot="action">
           <b-button size="sm" @row-clicked="routerLinkProfile">Profile</b-button>
     </template>
+
     </b-table>
 
 </template>
@@ -12,7 +13,6 @@
 
 <script>
 import my_json from './../../server/test.json';
-//import $ from 'jquery';
 
 export default {
   data () {
@@ -45,8 +45,9 @@ export default {
   },
   methods: {
   routerLinkProfile(record, index) {
-    this.$router.push({ path: '/profile/'+index+'/'+my_json.items[index].name+'/'+my_json.items[index].surname });
+    this.$router.push({ path: '/profile/'+index+'/'+my_json.items[index].name+'/'+my_json.items[index].surname}); 
   }
+
   }
 }
 </script>
