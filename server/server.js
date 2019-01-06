@@ -2,12 +2,10 @@ var express = require('express');
 var app = express();
 var mongo = require('mongodb');
 var path = require('path');
-var cors = require('cors');
 
 
 // Fichiers json
-var data = require('./test.json');
-var campus = require('./campus.json');
+var campus = require('./data/campus.json');
 
 var ega1 = require('./data/bastide/ega1.json');
 var iae = require('./data/bastide/iae.json');
@@ -45,40 +43,39 @@ app.use(function(req, res, next) {
 });
 
 // Page serveur
-app.get('/', function(req, res, next) {res.sendFile(path.join(__dirname + '/index.html'));});
+app.get('/', function(req, res) {res.sendFile(path.join(__dirname + '/index.html'));});
 
 // Pages json
-app.get('/data_s', function(req, res, next) {res.send(data);});
-app.get('/data_f', function(req, res, next) {res.send(campus);});
+app.get('/campus', function(req, res) {res.send(campus);});
 
-app.get('/5/0', function(req, res, next) {res.send(iae);});
-app.get('/5/1', function(req, res, next) {res.send(ega1);});
-app.get('/5/2', function(req, res, next) {res.send(iut);});
+app.get('/5/0', function(req, res) {res.send(iae);});
+app.get('/5/1', function(req, res) {res.send(ega1);});
+app.get('/5/2', function(req, res) {res.send(iut);});
 
-app.get('/3/0', function(req, res, next) {res.send(sm);});
-app.get('/3/1', function(req, res, next) {res.send(sp);});
-app.get('/3/2', function(req, res, next) {res.send(sv);});
-app.get('/3/3', function(req, res, next) {res.send(spe);});
+app.get('/3/0', function(req, res) {res.send(sm);});
+app.get('/3/1', function(req, res) {res.send(sp);});
+app.get('/3/2', function(req, res) {res.send(sv);});
+app.get('/3/3', function(req, res) {res.send(spe);});
 
-app.get('/4/0', function(req, res, next) {res.send(dsp);});
-app.get('/4/1', function(req, res, next) {res.send(ega2);});
-app.get('/4/2', function(req, res, next) {res.send(it);});
-app.get('/4/3', function(req, res, next) {res.send(staps);});
+app.get('/4/0', function(req, res) {res.send(dsp);});
+app.get('/4/1', function(req, res) {res.send(ega2);});
+app.get('/4/2', function(req, res) {res.send(it);});
+app.get('/4/3', function(req, res) {res.send(staps);});
 
-app.get('/1/0', function(req, res, next) {res.send(bio);});
-app.get('/1/1', function(req, res, next) {res.send(chimie);});
-app.get('/1/2', function(req, res, next) {res.send(info);});
-app.get('/1/3', function(req, res, next) {res.send(math);});
-app.get('/1/4', function(req, res, next) {res.send(phy);});
-app.get('/1/5', function(req, res, next) {res.send(si);});
-app.get('/1/6', function(req, res, next) {res.send(ste);});
+app.get('/1/0', function(req, res) {res.send(bio);});
+app.get('/1/1', function(req, res) {res.send(chimie);});
+app.get('/1/2', function(req, res) {res.send(info);});
+app.get('/1/3', function(req, res) {res.send(math);});
+app.get('/1/4', function(req, res) {res.send(phy);});
+app.get('/1/5', function(req, res) {res.send(si);});
+app.get('/1/6', function(req, res) {res.send(ste);});
 
-app.get('/2/0', function(req, res, next) {res.send(as);});
-app.get('/2/1', function(req, res, next) {res.send(psych);});
-app.get('/2/2', function(req, res, next) {res.send(se);});
-app.get('/2/3', function(req, res, next) {res.send(socio);});
-app.get('/2/4', function(req, res, next) {res.send(odon);});
-app.get('/2/5', function(req, res, next) {res.send(speg);});
+app.get('/2/0', function(req, res) {res.send(as);});
+app.get('/2/1', function(req, res) {res.send(psych);});
+app.get('/2/2', function(req, res) {res.send(se);});
+app.get('/2/3', function(req, res) {res.send(socio);});
+app.get('/2/4', function(req, res) {res.send(odon);});
+app.get('/2/5', function(req, res) {res.send(speg);});
 
 /*app.post('http://localhost:3000/addit', function (req, res) {
 	  var users={
@@ -98,17 +95,17 @@ mongo.connect(ourData , function(error , db){
 	var dbase = db.db("ourData");
 
 	dbase.listCollections().toArray(function(err, items){
-	    if (err) throw err;
+		if (err) throw err;
 
-	    if (items.length == 0){
-	        console.log("No collections in database");
-	        var testFolder = './data';
+		if (items.length == 0){
+			console.log("No collections in database");
+			var testFolder = './data';
 			var fs = require('fs');
 
 			fs.readdir(testFolder, function(err, files){
 				if(err) throw err;
-			  	files.forEach(function(file){
-			    	dbase.createCollection(file , function(err , collection){
+				files.forEach(function(file){
+					dbase.createCollection(file , function(err){
 						if(err) throw err;
 
 						//================== json files =====================
@@ -116,26 +113,25 @@ mongo.connect(ourData , function(error , db){
 						var folderName = ""+file;
 						
 						fs.readdir(testCollection, function(err, files){
-					  		files.forEach(function(file){
-					  			var str = file.split('.');
+							files.forEach(function(file){
 								var jsonFile = require('./data/'+folderName+'/'+file);
-								dbase.collection(folderName).insertOne(jsonFile, function(err, res) {
-							    	if (err) throw err;
-						  		});
-						  	});
+								dbase.collection(folderName).insertOne(jsonFile, function(err) {
+									if (err) throw err;
+								});
+							});
 						});
 						//===================================================
 					});
-			  	});
+				});
 			});
 			console.log("DB created successfully");
-	    }else{
-	    	console.log("DB already exists");
-	    }
+		}else{
+			console.log("DB already exists");
+		}
 	});
 });
 
-app.use(function(req, res, next){
+app.use(function(req, res){
   res.status(404).send('Page introuvable !');
 });
 

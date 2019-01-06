@@ -11,7 +11,7 @@
 <!-- ============================================================================ -->
 
 <script>
-import campus from './../../server/campus.json'
+
 export default {
   data () {
     return {
@@ -19,8 +19,14 @@ export default {
         name: {label: 'name',sortable: true},
         action: {label: 'Action'}
       },
-      campus: campus.campus
+      campus: [0]
     }
+  },
+  created() {
+    this.$http.get("http://localhost:3000/campus")
+            .then(response => {
+                this.campus = response.body.campus;
+    });
   },
   methods: {
   routerLinkToDetails(record, index) {

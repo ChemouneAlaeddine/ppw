@@ -3,8 +3,6 @@ import App from './App.vue';
 import router from './router.js';
 import VueRouter from 'vue-router';
 import Resource from 'vue-resource';
-//import mongodb from 'mongodb';
-//import mongoose from 'mongoose';
 
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';

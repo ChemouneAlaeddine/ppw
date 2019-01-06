@@ -6,9 +6,8 @@
 <!-- ============================================================================ -->
 
 <script>
-import axios from 'axios';
-import campus from './../../server/campus.json';
-
+import campus from './../../server/data/campus.json';
+import L from 'leaflet';
 export default {
   data () {
   var mapid = L.map('mapid').setView([44.8193401,-0.5956083], 13);

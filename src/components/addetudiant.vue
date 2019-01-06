@@ -16,9 +16,6 @@
 </template>
 
 <script>
-  import my_json from './../../server/test.json';
-  import axios from 'axios';
-import $ from 'jquery';
 
 export default {
  /* data () {
@@ -53,7 +50,7 @@ export default {
         },
         action: {label: 'Action'}
       },
-      items: my_json.items
+      items: [0]
     }
   },
   created() {
@@ -61,7 +58,7 @@ export default {
             .then(response => {
                 console.log(response);
     });*/
-    axios.post('/url', {
+    /*axios.post('/url', {
   jsonData: JSON.stringify(data)
 })
 .then(function (response) {
@@ -69,7 +66,7 @@ export default {
 })
 .catch(function (error) {
   console.log(error);
-});
+});*/
   },
       
   }

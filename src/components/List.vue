@@ -12,8 +12,6 @@
 <!-- ============================================================================ -->
 
 <script>
-//import my_json from './../../server/test.json';
-//import $ from 'jquery';
 
 export default {
   data () {
@@ -49,7 +47,7 @@ export default {
   },
   methods: {
   routerLinkProfile(record, index) {
-    this.$router.push({ path: '/profile/'+index+'/'+this.array[index].name+'/'+this.array[index].surname });
+    this.$router.push({ path: '/profile/'+index });
 
   }
 
