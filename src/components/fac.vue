@@ -12,6 +12,7 @@
 <!-- ============================================================================ -->
 
 <script>
+import axios from 'axios';
 
 export default {
   data () {
@@ -26,11 +27,13 @@ export default {
   },
   created(){
     var i = this.$route.params.id - 1;
-    this.$http.get("http://localhost:3000/campus")
-            .then(response => {
-                this.ufs = response.body.campus[i].uf;
-                this.camp = this.ufs.name;
-    });
+
+    axios
+      .get('http://localhost:3000/campus')
+      .then(response => {
+        this.ufs = response.data.campus[i].uf;
+        this.camp = this.ufs.name;
+      });
   },
   methods: {
   routerLinkToDetails(record, index) {

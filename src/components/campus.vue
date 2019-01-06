@@ -11,6 +11,7 @@
 <!-- ============================================================================ -->
 
 <script>
+import axios from 'axios';
 
 export default {
   data () {
@@ -23,14 +24,13 @@ export default {
     }
   },
   created() {
-    this.$http.get("http://localhost:3000/campus")
-            .then(response => {
-                this.campus = response.body.campus;
-    });
+    axios
+      .get('http://localhost:3000/campus')
+      .then(response => (this.campus = response.data.campus));
   },
   methods: {
   routerLinkToDetails(record, index) {
-    this.$router.push({ path: '/fac/'+index });
+    this.$router.push({ path: '/fac/'+(index+1) });
   }
   }
 }

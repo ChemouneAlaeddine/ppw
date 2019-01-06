@@ -12,6 +12,7 @@
 <!-- ============================================================================ -->
 
 <script>
+import axios from 'axios';
 
 export default {
   data () {
@@ -40,15 +41,13 @@ export default {
     var i = this.$route.params.id1;
     var j = this.$route.params.id2;
 
-    this.$http.get("http://localhost:3000/"+i+"/"+j)
-            .then(response => {
-                this.array = response.body.students;
-    });
+    axios
+      .get("http://localhost:3000/"+i+"/"+j)
+      .then(response => (this.array = response.data.students));
   },
   methods: {
   routerLinkProfile(record, index) {
-    this.$router.push({ path: '/profile/'+index });
-
+    this.$router.push({ path: this.$route.params.id2+'/profile/'+(index+1) });
   }
 
   }

@@ -13,7 +13,7 @@ export default new Router({
 	{path: '/fac/:id1?/list/:id2?', component: List},
 	{path: '/campus', component: Campus},
 	{path: '/stat', component: Stat},
-	{path: '/profile/:id3?', component: profile},
+	{path: '/fac/:id1?/list/:id2?/profile/:id3?', component: profile},
 	{path: '/fac/:id?', component: fac},
 	{path: '/form', component: Form}]
 });

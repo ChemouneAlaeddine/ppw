@@ -7,7 +7,6 @@
         <b-navbar-nav>
           <b-nav-item-dropdown text="List">
             <b-dropdown-item href="/campus">campus</b-dropdown-item>
-            <b-dropdown-item href="/list">students</b-dropdown-item>
             <b-dropdown-item href="/form">ajouter un étudiant</b-dropdown-item>
           </b-nav-item-dropdown>
           <b-nav-item href="/stat">Stats</b-nav-item>
