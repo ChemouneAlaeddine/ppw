@@ -25,8 +25,10 @@ export default {
   },
   created() {
     axios
-      .get('http://localhost:3000/campus')
-      .then(response => (this.campus = response.data.campus));
+      .get('http://localhost:3000/data/campus.json')
+      .then(response => {
+        this.campus = response.data[0].campus;
+        });
   },
   methods: {
   routerLinkToDetails(record, index) {

@@ -38,12 +38,19 @@ export default {
     }
   },
   created() {
-    var i = this.$route.params.id1;
+    var i = this.$route.params.id1 - 1;
     var j = this.$route.params.id2;
 
     axios
-      .get("http://localhost:3000/"+i+"/"+j)
-      .then(response => (this.array = response.data.students));
+      .get("http://localhost:3000/data/campus.json")
+      .then(response => {
+        var camp = response.data[0].campus[i].name.split(" ")[response.data[0].campus[i].name.split(" ").length - 1].toLowerCase();
+        axios
+        .get("http://localhost:3000/data/"+camp)
+        .then(response => {
+          this.array = response.data[j].students;
+        });
+      });
   },
   methods: {
   routerLinkProfile(record, index) {
