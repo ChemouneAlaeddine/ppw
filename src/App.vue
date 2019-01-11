@@ -2,7 +2,7 @@
   <div id="nav">
     <b-navbar toggleable="md" type="dark" variant="info">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <b-navbar-brand href="/">Accueil</b-navbar-brand>
+      <b-navbar-brand href="/Home">Accueil</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item-dropdown text="List">
@@ -29,23 +29,41 @@
               <em>User</em>
             </template>
             <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Signout</b-dropdown-item>
+            <b-dropdown-item href="/logout">Signout</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
 
     <router-view></router-view>
-  
   </div>
 </template>
 
 <script>
 export default {
   data () {
-    return {}
+    return {
+      authenticated: false,
+                mockAccount: {
+                    username: "admin",
+                    password: "admin"
+    }
   }
-}
+},
+mounted() {
+            if(!this.authenticated) {
+                this.$router.replace({ name: "login" });
+            }
+        },
+        methods: {
+            setAuthenticated(status) {
+                this.authenticated = status;
+            },
+            logout() {
+                this.authenticated = false;
+            }
+        }
+    }
 </script>
 
 <style lang="stylus">

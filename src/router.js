@@ -6,10 +6,24 @@ import Campus from './components/campus.vue';
 import fac from './components/fac.vue';
 import profile from './components/profile.vue';
 import Form from './components/addetudiant.vue';
+import LoginComponent from "./components/login.vue"
 
 export default new Router({
-	mode: 'history',
-	routes: [{path: '/', component: HomePage},
+	routes: [
+		/*{path: '/', 
+	/*redirect: {
+		name: "login"
+	}
+},*/
+	//component: HomePage},
+	{path: '/', 
+		name: "login",
+		component: LoginComponent
+	},
+	{path: '/Home', 
+		name: "Home",
+		component: HomePage
+	},
 	{path: '/fac/:id1?/list/:id2?', component: List},
 	{path: '/campus', component: Campus},
 	{path: '/stat', component: Stat},
