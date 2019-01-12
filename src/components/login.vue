@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
     export default {
         name: 'Login',
         data() {
@@ -21,12 +23,28 @@
         methods: {
             login() {
                 if(this.input.username != "" && this.input.password != "") {
-                    if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
+
+                    var user = {
+                        username: this.input.username,
+                        password: this.input.password
+                    }
+                    
+                    axios.post('http://localhost:3000/login', user);
+
+                    axios.get('http://localhost:3000/login').then(result => {
+                        if(result.data == 'false') {
+                            this.$router.replace({ path: "/" });
+                        }else{
+                            this.$router.replace({ path: "/Home" });
+                        }
+                    });
+
+                    /*if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
                         this.$emit("authenticated", true);
-                        this.$router.replace({ name: "Home" });
+                        this.$router.replace({ name: "/Home" });
                     } else {
                         console.log("The username and / or password is incorrect");
-                    }
+                    }*/
                 } else {
                     console.log("A username and password must be present");
                 }

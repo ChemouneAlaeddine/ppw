@@ -21,8 +21,8 @@
             <template slot="button-content">
               <em>User</em>
             </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="/logout">Signout</b-dropdown-item>
+            <b-dropdown-item href="">Profile</b-dropdown-item>
+            <b-dropdown-item @click.stop="logout" href="">Signout</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
@@ -33,30 +33,25 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data () {
-    return {
-      authenticated: false,
-                mockAccount: {
-                    username: "admin",
-                    password: "admin"
+    return {}
+  },
+  mounted() {
+    axios.get('http://localhost:3000/login').then(result => {
+      if(!result) {
+        this.$router.replace({ name: "login" });
+      }
+    });
+  },
+  methods: {
+    logout() {
+        axios.post('http://localhost:3000/logout');
     }
   }
-},
-mounted() {
-            if(!this.authenticated) {
-                this.$router.replace({ name: "login" });
-            }
-        },
-        methods: {
-            setAuthenticated(status) {
-                this.authenticated = status;
-            },
-            logout() {
-                this.authenticated = false;
-            }
-        }
-    }
+}
 </script>
 
 <style lang="stylus">

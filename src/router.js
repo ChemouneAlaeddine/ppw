@@ -5,10 +5,11 @@ import Stat from './components/Statistics.vue';
 import Campus from './components/campus.vue';
 import fac from './components/fac.vue';
 import profile from './components/profile.vue';
-import Form from './components/addetudiant.vue';
-import LoginComponent from "./components/login.vue"
+import Form from './components/addStudent.vue';
+import LoginComponent from './components/login.vue';
 
 export default new Router({
+	mode: 'history',
 	routes: [
 		/*{path: '/', 
 	/*redirect: {
@@ -20,8 +21,8 @@ export default new Router({
 		name: "login",
 		component: LoginComponent
 	},
-	{path: '/Home', 
-		name: "Home",
+	{path: '/Home',
+		name: 'Home',
 		component: HomePage
 	},
 	{path: '/fac/:id1?/list/:id2?', component: List},

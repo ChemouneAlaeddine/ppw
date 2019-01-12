@@ -1,9 +1,9 @@
 var mongo = require('mongodb');
 
 // Création de la BDD
-var ourData = "mongodb://localhost:27017/ourData";
+var ourData2 = "mongodb://localhost:27017/ourData";
 
-mongo.connect(ourData , function(error , db){
+mongo.connect(ourData2 , function(error , db){
 	if (error){throw error;}
 	
 	var dbase = db.db("ourData");
@@ -19,29 +19,44 @@ mongo.connect(ourData , function(error , db){
 			fs.readdir(testFolder, function(err, files){
 				if(err) throw err;
 				files.forEach(function(file){
-					dbase.createCollection(file , function(err){
-						if(err) throw err;
+					/*dbase.createCollection(file , function(err){*/
+						//if(err) throw err;
 
 						//================== json files =====================
-						var testCollection = './data/'+file;
+						var folderCollection = './data/'+file;
 						var folderName = ""+file;
 						if(folderName == 'campus.json'){
-							var jsonFile = require('./data/'+folderName);
-							dbase.collection(folderName).insertOne(jsonFile, function(err) {
-								if (err) throw err;
-							});
+							var collectionName = folderName.split('.')[0];
+                            dbase.createCollection(collectionName , function(err){
+                                if(err) throw err;
+                                var jsonFile = require('./data/'+folderName);
+                                dbase.collection(collectionName).insert(jsonFile, function(err) {
+                                    if (err) throw err;
+                                });
+                            });
 						}else{
-							fs.readdir(testCollection, function(err, files){
-								files.forEach(function(file){
-									var jsonFile = require('./data/'+folderName+'/'+file);
-									dbase.collection(folderName).insertOne(jsonFile, function(err) {
-										if (err) throw err;
-									});
+                            fs.readdir(folderCollection, function(err, files){
+								dbase.createCollection(folderName , function(err){
+									if (err) throw err;
 								});
-							});
+								files.forEach(function(file){
+									var str = ""+file;
+									var collectionName = folderName+"_"+str.split('.')[0];
+                                    dbase.createCollection(collectionName , function(err){
+                                        if (err) throw err;
+                                        var jsonFile = require('./data/'+folderName+'/'+file);
+                                        dbase.collection(collectionName).insert(jsonFile, function(err) {
+                                            if (err) throw err;
+										});
+										dbase.collection(folderName).insert(jsonFile, function(err) {
+                                            if (err) throw err;
+                                        });
+                                    });
+                                });
+                            });
 						}
 						//===================================================
-					});
+					/*});*/
 				});
 			});
 			console.log("DB created successfully");

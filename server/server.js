@@ -33,7 +33,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define where the MongoDB server is
-var url = 'mongodb://localhost:27017/ourData2';
+var url = 'mongodb://localhost:27017/ourData';
 
 //======================================= Data JSON files =============================================
 app.get('/data/:id', function(req, res) {
@@ -47,24 +47,6 @@ app.get('/data/:id', function(req, res) {
 
 			// Get the documents collection
       var collection = db.collection(req.params.id);
-
-      //var result;
-      //var result;
-      
-      /*db.listCollections().toArray(function(err, collInfos) {
-        if (err) throw err;
-        //var result = JSON.stringify(collInfos);
-        collInfos.forEach(function(coll){
-          if(coll.name.split('_')[0] == req.params.id && coll.name.split('_')[1]){
-            console.log(coll.name);
-            //db.collection(req.params.id).find({});
-            db.collection(coll.name).find({}).toArray(function(err, collArray){
-              Array.prototype.push.apply(result,collArray); 
-              console.log(result);
-            });
-          }
-        });
-      });*/
 
 			// Find all students
 			collection.find({}).toArray(function (err, result) {
@@ -84,7 +66,7 @@ app.get('/data/:id', function(req, res) {
 //const ticketRoutes = express.Router();
 app.post('/add', function(req, res){
     // Connect to the server
-    MongoClient.connect('mongodb://localhost:27017/ourData2', function(err, db){
+    MongoClient.connect(url, function(err, db){
       if (err) {
         console.log('Unable to connect to the Server:', err);
       } else {
@@ -108,6 +90,29 @@ app.post('/add', function(req, res){
       }
     });
   });
+//======================================================================================================
+//============================================ Login/Logout ====================================================
+//const ticketRoutes = express.Router();
+var auth = {
+  authenticated: false,
+                mockAccount: {
+                    username: "admin",
+                    password: "admin"
+                  }
+                };
+app.get('/login', function(req, res){
+  // Connect to the server
+  res.send(""+auth.authenticated);
+});
+app.post('/login', function(req, res){
+  // Connect to the server
+  console.log(req.body);
+  if(req.body == auth.mockAccount)
+    auth.authentified = true;
+});
+app.post('/logout', function(){
+  auth.authentified = false;
+});
 //======================================================================================================
 
 app.use(function(req, res){
