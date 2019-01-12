@@ -1,4 +1,6 @@
 <template>
+  <div>
+  <b-button size="sm" @click.stop="newProfile" class="mr-2">New</b-button>
   <b-table striped hover :items="array" :fields="fields" @row-clicked="routerLinkProfile">
 
   <template slot="action">
@@ -6,6 +8,7 @@
     </template>
 
     </b-table>
+  </div>
 
 </template>
 
@@ -42,21 +45,23 @@ export default {
     var j = this.$route.params.id2;
 
     axios
-      .get("http://localhost:3000/data/campus.json")
+      .get("http://localhost:3000/data/campus")
       .then(response => {
-        var camp = response.data[0].campus[i].name.split(" ")[response.data[0].campus[i].name.split(" ").length - 1].toLowerCase();
+        var camp = response.data[i].name.split(" ")[response.data[i].name.split(" ").length - 1].toLowerCase();
         axios
-        .get("http://localhost:3000/data/"+camp)
+        .get("http://localhost:3000/data/"+camp+"_"+j)
         .then(response => {
-          this.array = response.data[j].students;
+          this.array = response.data;
         });
       });
   },
   methods: {
   routerLinkProfile(record, index) {
     this.$router.push({ path: this.$route.params.id2+'/profile/'+(index+1) });
+  },
+  newProfile(){
+    this.$router.push({ path: this.$route.params.id2+'/form'});
   }
-
   }
 }
 </script>

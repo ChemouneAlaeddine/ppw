@@ -6,8 +6,9 @@
 <!-- ============================================================================ -->
 
 <script>
-import campus from './../../server/data/campus.json';
 import L from 'leaflet';
+import axios from 'axios';
+
 export default {
   data () {
   var mapid = L.map('mapid').setView([44.8193401,-0.5956083], 13);
@@ -20,10 +21,16 @@ export default {
     id: 'mapbox.streets'
   }).addTo(mapid);
   
-  for (let i in campus.campus) {
-      let webPage = "/fac/"+campus.campus[i].index;
-      L.marker([campus.campus[i].longitude, campus.campus[i].laltitude]).on('click', function markerOnClick(){location.href = webPage;}).addTo(mapid).bindPopup("<a href="+webPage+">"+campus.campus[i].name+"</a>", {autoClose:false}).openPopup(); 
-  }
+  axios
+      .get("http://localhost:3000/data/campus")
+      .then(response => {
+        var campus = response.data;
+        for (let i=0; i< campus.length; i++) {
+            let webPage = "/fac/"+campus[i].index;
+            L.marker([campus[i].longitude, campus[i].laltitude]).on('click', function markerOnClick(){location.href = webPage;}).addTo(mapid).bindPopup("<a href="+webPage+">"+campus[i].name+"</a>", {autoClose:false}).openPopup(); 
+        }
+      });
+
   return {
     mapid
   }

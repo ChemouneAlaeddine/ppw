@@ -42,12 +42,12 @@ export default {
   data () {
     return {
       student: {
-      index: 0,
-      name: 0,
-      surname: 0,
-      email: 0,
-      fullname: 0,
-      float: 0
+        index: 0,
+        name: 0,
+        surname: 0,
+        email: 0,
+        fullname: 0,
+        float: 0
       }
     }
   },
@@ -57,13 +57,13 @@ export default {
       var k = this.$route.params.id3;
 
       axios
-      .get("http://localhost:3000/data/campus.json")
+      .get("http://localhost:3000/data/campus")
       .then(response => {
-        var camp = response.data[0].campus[i].name.split(" ")[response.data[0].campus[i].name.split(" ").length - 1].toLowerCase();
+        var camp = response.data[i].name.split(" ")[response.data[i].name.split(" ").length - 1].toLowerCase();
         axios
-        .get("http://localhost:3000/data/"+camp)
+        .get("http://localhost:3000/data/"+camp+"_"+j)
         .then(response => {
-          this.student = response.data[j].students[k - 1];
+          this.student = response.data[k - 1];
         });
       });
   }

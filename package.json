@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "bootstrap-vue": "^2.0.0-rc.11",
     "cors": "^2.8.5",
     "dns": "^0.2.2",
     "jQuery": "^1.7.4",
     "jquery": "^3.3.1",
+    "json-concat": "0.0.1",
+    "json-stringify": "^1.0.0",
     "module": "^1.2.5",
     "mongodb": "^3.1.10",
     "mongoose": "^5.4.2",
@@ -24,6 +27,7 @@
     "vue": "^2.5.17",
     "vue-jquery": "^1.0.6",
     "vue-router": "^3.0.2",
+    "vue-select": "^2.5.1",
     "vue2-leaflet": "^1.2.3"
   },
   "devDependencies": {

@@ -12,6 +12,9 @@
     "cors": "^2.8.5",
     "document-ready": "^2.0.2",
     "express": "^4.16.4",
+    "json-concat": "0.0.1",
+    "json-stringify": "^1.0.0",
+    "merge-json": "0.1.0-b.3",
     "mongodb": "^2.2.33",
     "mongoose": "^5.4.2",
     "nodemon": "^1.18.9"

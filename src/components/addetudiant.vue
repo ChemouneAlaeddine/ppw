@@ -1,133 +1,86 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+      <form method="post" v-on:submit.prevent="addToAPI">
+      <div class="well">
+        <h4> Ajout Etudiant</h4>
 
-      <!-- b-form-group id="exampleInputGroup3"
-                    label="Campus:"
-                    label-for="exampleInput3">
-        <b-form-select id="exampleInput3"
-                      :options="campus"
-                      required
-                      v-model="form.campus">
-        </b-form-select>
-      </b-form-group>
-
-      <b-form-group id="example1InputGroup3"
-                    label="UF:"
-                    label-for="exampleInput3">
-        <b-form-select id="example1Input3"
-                      :options="uf"
-                      required
-                      v-model="form.uf">
-        </b-form-select>
-      </b-form-group -->
-      
-      <b-form-group id="exampleInputGroup2"
-                    label="Name:"
-                    label-for="exampleInput2">
-        <b-form-input id="exampleInput2"
-                      type="text"
-                      v-model="form.name"
-                      required
-                      placeholder="Enter name">
-        </b-form-input>
-      </b-form-group>
-
-      <b-form-group id="example2InputGroup2"
-                    label="Surname:"
-                    label-for="exampleInput2">
-        <b-form-input id="example2Input2"
-                      type="text"
-                      v-model="form.surname"
-                      required
-                      placeholder="Enter surname">
-        </b-form-input>
-      </b-form-group>
-
-      <b-form-group id="exampleInputGroup1"
-                    label="Email address:"
-                    label-for="exampleInput1"
-                    description="We'll never share your email with anyone else.">
-        <b-form-input id="exampleInput1"
-                      type="email"
-                      v-model="form.email"
-                      required
-                      placeholder="Enter email">
-        </b-form-input>
-      </b-form-group>
-
-      <b-form-group id="example3InputGroup2"
-                    label="Fullname:"
-                    label-for="exampleInput2">
-        <b-form-input id="example3Input2"
-                      type="text"
-                      v-model="form.name"
-                      required
-                      placeholder="Enter fullname">
-        </b-form-input>
-      </b-form-group>
-
-      <b-form-group id="example4InputGroup2"
-                    label="Result:"
-                    label-for="exampleInput2">
-        <b-form-input id="example4Input2"
-                      type="text"
-                      v-model="form.float"
-                      required
-                      placeholder="result">
-        </b-form-input>
-      </b-form-group>
-      
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
-    </b-form>
+        <div class="form-group">
+          <label class="pull-left"> Nom </label>
+          <input type="text" class="form-control" placeholder="Nom" v-model="student.name">
+        </div>
+        <div class="form-group">
+          <label class="pull-left"> Prénom </label>
+          <input type="text" class="form-control" placeholder="Prénom" v-model="student.surname">
+        </div>
+        <div class="form-group">
+          <label class="pull-left"> Email </label>
+          <input type="text" class="form-control" placeholder="Email" v-model="student.email">
+        </div>
+        <div class="form-group">
+          <label class="pull-left"> Nom complet </label>
+          <input type="text" class="form-control" placeholder="Nom Complet" v-model="student.fullname">
+        </div>
+        <div class="form-group">
+          <label class="pull-left"> Moyenne </label>
+          <input type="text" class="form-control" placeholder="Moyenne" v-model="student.float">
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Valider</button>
+      <button type="reset" class="btn btn-large btn-block btn-primary full-width" @click="onReset">Reset</button>
+    </form>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
-var sleep = require('system-sleep');
 
 export default {
   data () {
     return {
-      form: {
-        email: '',
-        name: '',
-        surname: '',
+      student: {
+        campus: 0,
+        uf: 0,
+        name: "",
+        surname: "",
+        email: "",
+        fullname: "",
         float: 0
       },
-      campus: [0,0,0,0,0],
-      uf: [],
       show: true
     }
   },
   created() {
+    var i = this.$route.params.id1 - 1;
+    this.student.uf = this.$route.params.id2;
+
     axios
-    .get("http://localhost:3000/data/campus.json")
-    .then(response => {
-      for(let i=0; i<response.data.campus.length; i++){
-        this.campus[i] = response.data.campus[i].name;
-        //console.log(this.campus[i]);
-      }
-    });
+      .get("http://localhost:3000/data/campus")
+      .then(response => {
+        this.student.campus = response.data[i].name.split(" ")[response.data[i].name.split(" ").length - 1].toLowerCase();
+      });
   },
   methods: {
-    onSubmit (evt) {
-      console.log("submit");
-      console.log(evt);
-      //sleep(20000);
-
-      //evt.preventDefault();
-      alert(JSON.stringify(this.form));
+    addToAPI() {
+      let newStudent = {
+        campus: this.student.campus,
+        uf: this.student.uf,
+        name: this.student.name,
+        surname: this.student.surname,
+        email: this.student.email,
+        fullname: this.student.fullname,
+        float: this.student.float
+      }
+      axios
+        .post('http://localhost:3000/add', newStudent);
     },
     onReset (evt) {
       evt.preventDefault();
       /* Reset our form values */
-      this.form.email = '';
-      this.form.name = '';
-      this.form.surname = '';
-      this.form.float = 0;
+      this.student.email = '';
+      this.student.name = '';
+      this.student.surname = '';
+      this.student.float = 0;
       /* Trick to reset/clear native browser form validation state */
       this.show = false;
       this.$nextTick(() => { this.show = true });

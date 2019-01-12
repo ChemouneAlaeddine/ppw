@@ -29,5 +29,5 @@ export default new Router({
 	{path: '/stat', component: Stat},
 	{path: '/fac/:id1?/list/:id2?/profile/:id3?', component: profile},
 	{path: '/fac/:id?', component: fac},
-	{path: '/form', component: Form}]
+	{path: '/fac/:id1?/list/:id2?/form', component: Form}]
 });

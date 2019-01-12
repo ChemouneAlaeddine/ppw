@@ -29,9 +29,9 @@ export default {
     var i = this.$route.params.id - 1;
 
     axios
-      .get('http://localhost:3000/data/campus.json')
+      .get('http://localhost:3000/data/campus')
       .then(response => {
-        this.ufs = response.data[0].campus[i].uf;
+        this.ufs = response.data[i].uf;
         this.camp = this.ufs.name;
       });
   },

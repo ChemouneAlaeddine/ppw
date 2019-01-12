@@ -25,9 +25,9 @@ export default {
   },
   created() {
     axios
-      .get('http://localhost:3000/data/campus.json')
+      .get('http://localhost:3000/data/campus')
       .then(response => {
-        this.campus = response.data[0].campus;
+        this.campus = response.data;
         });
   },
   methods: {
