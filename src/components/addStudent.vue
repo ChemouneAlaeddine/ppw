@@ -1,9 +1,8 @@
 <template>
-  <div>
+  <div class="container">
       <form method="post" v-on:submit.prevent="addToAPI">
       <div class="well">
         <h4> Ajout Etudiant</h4>
-
         <div class="form-group">
           <label class="pull-left"> Nom </label>
           <input type="text" class="form-control" placeholder="Nom" v-model="student.name">
@@ -27,7 +26,7 @@
       </div>
   
       <button type="submit" class="btn btn-primary">Valider</button>
-      <button type="reset" class="btn btn-large btn-block btn-primary full-width" @click="onReset">Reset</button>
+      <button type="reset" class="btn btn-primary" @click="onReset">Reset</button>
     </form>
   </div>
 </template>
@@ -90,5 +89,12 @@ export default {
 </script>
 
 <style scoped>
-
+.container{
+  width: 50%;
+  margin: auto;
+}
+button{
+  margin-left: 60px;
+  text-align: center;
+}
 </style>

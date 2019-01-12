@@ -1,23 +1,216 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'ls', '--depth', '0', '--json' ]
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'vuejs-dialog/vuejs-dialog-mixin.min.js' ]
 2 info using npm@3.5.2
 3 info using node@v8.10.0
-4 error extraneous: vue-bootstrap-table2@1.1.8 /home/chemoune/vue-project/node_modules/vue-bootstrap-table2
-4 error extraneous: vuetable@1.5.12 /home/chemoune/vue-project/node_modules/vuetable
-4 error peer dep missing: ajv@^5.0.0, required by ajv-keywords@2.1.1
-5 verbose exit [ 1, true ]
-6 verbose stack Error: write EPIPE
-6 verbose stack     at _errnoException (util.js:1022:11)
-6 verbose stack     at WriteWrap.afterWrite [as oncomplete] (net.js:880:14)
-7 verbose cwd /home/chemoune/vue-project
-8 error Linux 4.15.0-43-generic
-9 error argv "/usr/bin/node" "/usr/bin/npm" "ls" "--depth" "0" "--json"
-10 error node v8.10.0
-11 error npm  v3.5.2
-12 error code EPIPE
-13 error errno EPIPE
-14 error syscall write
-15 error write EPIPE
-16 error If you need help, you may report this error at:
-16 error     <https://github.com/npm/npm/issues>
-17 verbose exit [ 1, true ]
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData vuejs-dialog/vuejs-dialog-mixin.min.js
+8 silly fetchOtherPackageData vuejs-dialog/vuejs-dialog-mixin.min.js
+9 silly cache add args [ 'vuejs-dialog/vuejs-dialog-mixin.min.js', null ]
+10 verbose cache add spec vuejs-dialog/vuejs-dialog-mixin.min.js
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'vuejs-dialog/vuejs-dialog-mixin.min.js',
+11 silly cache add   scope: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'vuejs-dialog/vuejs-dialog-mixin.min.js',
+11 silly cache add   spec: 'github:vuejs-dialog/vuejs-dialog-mixin.min.js',
+11 silly cache add   type: 'hosted',
+11 silly cache add   hosted:
+11 silly cache add    { type: 'github',
+11 silly cache add      ssh: 'git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git',
+11 silly cache add      sshUrl: 'git+ssh://git@github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git',
+11 silly cache add      httpsUrl: 'git+https://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git',
+11 silly cache add      gitUrl: 'git://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git',
+11 silly cache add      shortcut: 'github:vuejs-dialog/vuejs-dialog-mixin.min.js',
+11 silly cache add      directUrl: 'https://raw.githubusercontent.com/vuejs-dialog/vuejs-dialog-mixin.min.js/master/package.json' } }
+12 verbose addRemoteGit caching vuejs-dialog/vuejs-dialog-mixin.min.js
+13 verbose addRemoteGit vuejs-dialog/vuejs-dialog-mixin.min.js is a repository hosted by github
+14 silly tryGitProto attempting to clone git://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git
+15 silly tryClone cloning vuejs-dialog/vuejs-dialog-mixin.min.js via git://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git
+16 verbose tryClone git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f not in flight; caching
+17 info git [ 'config', '--get', 'remote.origin.url' ]
+18 warn addRemoteGit Error: Command failed: git config --get remote.origin.url
+18 warn addRemoteGit
+18 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:275:12)
+18 warn addRemoteGit     at emitTwo (events.js:126:13)
+18 warn addRemoteGit     at ChildProcess.emit (events.js:214:7)
+18 warn addRemoteGit     at maybeClose (internal/child_process.js:925:16)
+18 warn addRemoteGit     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+18 warn addRemoteGit  vuejs-dialog/vuejs-dialog-mixin.min.js resetting remote /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f because of error: { Error: Command failed: git config --get remote.origin.url
+18 warn addRemoteGit
+18 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:275:12)
+18 warn addRemoteGit     at emitTwo (events.js:126:13)
+18 warn addRemoteGit     at ChildProcess.emit (events.js:214:7)
+18 warn addRemoteGit     at maybeClose (internal/child_process.js:925:16)
+18 warn addRemoteGit     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+18 warn addRemoteGit   killed: false,
+18 warn addRemoteGit   code: 1,
+18 warn addRemoteGit   signal: null,
+18 warn addRemoteGit   cmd: 'git config --get remote.origin.url' }
+19 info resetRemote resetting /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f for vuejs-dialog/vuejs-dialog-mixin.min.js
+20 silly gentlyRm /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f is being purged
+21 verbose gentlyRm don't care about contents; nuking /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f
+22 silly vacuum-fs purging /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f
+23 silly vacuum-fs quitting because other entries in /home/chemoune/.npm/_git-remotes
+24 info git [ 'clone',
+24 info git   '--template=/home/chemoune/.npm/_git-remotes/_templates',
+24 info git   '--mirror',
+24 info git   'git://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git',
+24 info git   '/home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f' ]
+25 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f: Clonage dans le dépôt nu '/home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f'
+25 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f: fatal: remote error:
+25 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-48e4d53f:   Repository not found.
+26 silly tryHTTPS attempting to clone git+https://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git
+27 silly tryClone cloning vuejs-dialog/vuejs-dialog-mixin.min.js via git+https://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git
+28 verbose tryClone git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1 not in flight; caching
+29 info git [ 'config', '--get', 'remote.origin.url' ]
+30 warn addRemoteGit Error: Command failed: git config --get remote.origin.url
+30 warn addRemoteGit
+30 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:275:12)
+30 warn addRemoteGit     at emitTwo (events.js:126:13)
+30 warn addRemoteGit     at ChildProcess.emit (events.js:214:7)
+30 warn addRemoteGit     at maybeClose (internal/child_process.js:925:16)
+30 warn addRemoteGit     at Socket.stream.socket.on (internal/child_process.js:346:11)
+30 warn addRemoteGit     at emitOne (events.js:116:13)
+30 warn addRemoteGit     at Socket.emit (events.js:211:7)
+30 warn addRemoteGit     at Pipe._handle.close [as _onclose] (net.js:567:12)
+30 warn addRemoteGit  vuejs-dialog/vuejs-dialog-mixin.min.js resetting remote /home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1 because of error: { Error: Command failed: git config --get remote.origin.url
+30 warn addRemoteGit
+30 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:275:12)
+30 warn addRemoteGit     at emitTwo (events.js:126:13)
+30 warn addRemoteGit     at ChildProcess.emit (events.js:214:7)
+30 warn addRemoteGit     at maybeClose (internal/child_process.js:925:16)
+30 warn addRemoteGit     at Socket.stream.socket.on (internal/child_process.js:346:11)
+30 warn addRemoteGit     at emitOne (events.js:116:13)
+30 warn addRemoteGit     at Socket.emit (events.js:211:7)
+30 warn addRemoteGit     at Pipe._handle.close [as _onclose] (net.js:567:12)
+30 warn addRemoteGit   killed: false,
+30 warn addRemoteGit   code: 1,
+30 warn addRemoteGit   signal: null,
+30 warn addRemoteGit   cmd: 'git config --get remote.origin.url' }
+31 info resetRemote resetting /home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1 for vuejs-dialog/vuejs-dialog-mixin.min.js
+32 silly gentlyRm /home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1 is being purged
+33 verbose gentlyRm don't care about contents; nuking /home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1
+34 silly vacuum-fs purging /home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1
+35 silly vacuum-fs quitting because other entries in /home/chemoune/.npm/_git-remotes
+36 info git [ 'clone',
+36 info git   '--template=/home/chemoune/.npm/_git-remotes/_templates',
+36 info git   '--mirror',
+36 info git   'https://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git',
+36 info git   '/home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1' ]
+37 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror https://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1: Clonage dans le dépôt nu '/home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1'
+37 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror https://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1: remote: Invalid username or password.
+37 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror https://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-https-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-895820a1: fatal: Authentication failed for 'https://github.com/vuejs-dialog/vuejs-dialog-mixin.min.js.git/'
+38 silly trySSH attempting to clone git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git
+39 silly tryClone cloning vuejs-dialog/vuejs-dialog-mixin.min.js via git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git
+40 verbose tryClone git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379 not in flight; caching
+41 info git [ 'config', '--get', 'remote.origin.url' ]
+42 warn addRemoteGit Error: Command failed: git config --get remote.origin.url
+42 warn addRemoteGit
+42 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:275:12)
+42 warn addRemoteGit     at emitTwo (events.js:126:13)
+42 warn addRemoteGit     at ChildProcess.emit (events.js:214:7)
+42 warn addRemoteGit     at maybeClose (internal/child_process.js:925:16)
+42 warn addRemoteGit     at Socket.stream.socket.on (internal/child_process.js:346:11)
+42 warn addRemoteGit     at emitOne (events.js:116:13)
+42 warn addRemoteGit     at Socket.emit (events.js:211:7)
+42 warn addRemoteGit     at Pipe._handle.close [as _onclose] (net.js:567:12)
+42 warn addRemoteGit  vuejs-dialog/vuejs-dialog-mixin.min.js resetting remote /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379 because of error: { Error: Command failed: git config --get remote.origin.url
+42 warn addRemoteGit
+42 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:275:12)
+42 warn addRemoteGit     at emitTwo (events.js:126:13)
+42 warn addRemoteGit     at ChildProcess.emit (events.js:214:7)
+42 warn addRemoteGit     at maybeClose (internal/child_process.js:925:16)
+42 warn addRemoteGit     at Socket.stream.socket.on (internal/child_process.js:346:11)
+42 warn addRemoteGit     at emitOne (events.js:116:13)
+42 warn addRemoteGit     at Socket.emit (events.js:211:7)
+42 warn addRemoteGit     at Pipe._handle.close [as _onclose] (net.js:567:12)
+42 warn addRemoteGit   killed: false,
+42 warn addRemoteGit   code: 1,
+42 warn addRemoteGit   signal: null,
+42 warn addRemoteGit   cmd: 'git config --get remote.origin.url' }
+43 info resetRemote resetting /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379 for vuejs-dialog/vuejs-dialog-mixin.min.js
+44 silly gentlyRm /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379 is being purged
+45 verbose gentlyRm don't care about contents; nuking /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379
+46 silly vacuum-fs purging /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379
+47 silly vacuum-fs quitting because other entries in /home/chemoune/.npm/_git-remotes
+48 info git [ 'clone',
+48 info git   '--template=/home/chemoune/.npm/_git-remotes/_templates',
+48 info git   '--mirror',
+48 info git   'git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git',
+48 info git   '/home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379' ]
+49 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379: Clonage dans le dépôt nu '/home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379'
+49 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379: git@github.com: Permission denied (publickey).
+49 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379: fatal: Impossible de lire le dépôt distant.
+49 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379:
+49 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379: Veuillez vérifier que vous avez les droits d'accès
+49 error git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379: et que le dépôt existe.
+50 silly fetchPackageMetaData Error: Command failed: git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379
+50 silly fetchPackageMetaData Clonage dans le dépôt nu '/home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379'
+50 silly fetchPackageMetaData git@github.com: Permission denied (publickey).
+50 silly fetchPackageMetaData fatal: Impossible de lire le dépôt distant.
+50 silly fetchPackageMetaData
+50 silly fetchPackageMetaData Veuillez vérifier que vous avez les droits d'accès
+50 silly fetchPackageMetaData et que le dépôt existe.
+50 silly fetchPackageMetaData
+50 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:275:12)
+50 silly fetchPackageMetaData     at emitTwo (events.js:126:13)
+50 silly fetchPackageMetaData     at ChildProcess.emit (events.js:214:7)
+50 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:925:16)
+50 silly fetchPackageMetaData     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+50 silly fetchPackageMetaData  error for vuejs-dialog/vuejs-dialog-mixin.min.js { Error: Command failed: git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379
+50 silly fetchPackageMetaData Clonage dans le dépôt nu '/home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379'
+50 silly fetchPackageMetaData git@github.com: Permission denied (publickey).
+50 silly fetchPackageMetaData fatal: Impossible de lire le dépôt distant.
+50 silly fetchPackageMetaData
+50 silly fetchPackageMetaData Veuillez vérifier que vous avez les droits d'accès
+50 silly fetchPackageMetaData et que le dépôt existe.
+50 silly fetchPackageMetaData
+50 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:275:12)
+50 silly fetchPackageMetaData     at emitTwo (events.js:126:13)
+50 silly fetchPackageMetaData     at ChildProcess.emit (events.js:214:7)
+50 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:925:16)
+50 silly fetchPackageMetaData     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+50 silly fetchPackageMetaData   killed: false,
+50 silly fetchPackageMetaData   code: 128,
+50 silly fetchPackageMetaData   signal: null,
+50 silly fetchPackageMetaData   cmd: 'git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379' }
+51 silly rollbackFailedOptional Starting
+52 silly rollbackFailedOptional Finishing
+53 silly runTopLevelLifecycles Starting
+54 silly runTopLevelLifecycles Finishing
+55 silly install printInstalled
+56 verbose stack Error: Command failed: git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379
+56 verbose stack Clonage dans le dépôt nu '/home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379'
+56 verbose stack git@github.com: Permission denied (publickey).
+56 verbose stack fatal: Impossible de lire le dépôt distant.
+56 verbose stack
+56 verbose stack Veuillez vérifier que vous avez les droits d'accès
+56 verbose stack et que le dépôt existe.
+56 verbose stack
+56 verbose stack     at ChildProcess.exithandler (child_process.js:275:12)
+56 verbose stack     at emitTwo (events.js:126:13)
+56 verbose stack     at ChildProcess.emit (events.js:214:7)
+56 verbose stack     at maybeClose (internal/child_process.js:925:16)
+56 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+57 verbose cwd /home/chemoune/vue-project
+58 error Linux 4.15.0-43-generic
+59 error argv "/usr/bin/node" "/usr/bin/npm" "install" "--save" "vuejs-dialog/vuejs-dialog-mixin.min.js"
+60 error node v8.10.0
+61 error npm  v3.5.2
+62 error code 128
+63 error Command failed: git clone --template=/home/chemoune/.npm/_git-remotes/_templates --mirror git@github.com:vuejs-dialog/vuejs-dialog-mixin.min.js.git /home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379
+63 error Clonage dans le dépôt nu '/home/chemoune/.npm/_git-remotes/git-github-com-vuejs-dialog-vuejs-dialog-mixin-min-js-git-3d928379'
+63 error git@github.com: Permission denied (publickey).
+63 error fatal: Impossible de lire le dépôt distant.
+63 error
+63 error Veuillez vérifier que vous avez les droits d'accès
+63 error et que le dépôt existe.
+64 error If you need help, you may report this error at:
+64 error     <https://github.com/npm/npm/issues>
+65 verbose exit [ 1, true ]

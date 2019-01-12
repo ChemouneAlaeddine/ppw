@@ -91,6 +91,23 @@ app.post('/add', function(req, res){
     });
   });
 //======================================================================================================
+//=========================================== Delete ===================================================
+app.delete('/delete/:camp?/:uf?/:record?/', function(req, res){
+  MongoClient.connect(url, function(err, db){
+    if (err) {
+      console.log('Unable to connect to the Server:', err);
+    } else {
+      console.log('Connected to Server');
+      // Get the documents collection
+      var collection = db.collection(req.param("camp")+'_'+req.param("uf"));
+      collection.find({}).toArray(function(err, collArray) {
+        if (err) throw err;
+        collection.remove(collArray[req.param("record")]);
+      });
+    }
+  });
+});
+//======================================================================================================
 //============================================ Login/Logout ====================================================
 //const ticketRoutes = express.Router();
 var auth = {

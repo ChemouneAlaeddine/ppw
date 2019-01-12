@@ -1,7 +1,6 @@
   <template>
   <div id="nav">
     <b-navbar toggleable="md" type="dark" variant="info">
-      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <b-navbar-brand href="/Home">Accueil</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
@@ -54,9 +53,5 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-body
-  width: 100%;
-  height: 100%;
-  border: solid 2px;
+<style scoped>
 </style>
