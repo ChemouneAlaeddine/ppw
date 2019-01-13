@@ -30,6 +30,21 @@
     <b-btn @click="showDismissibleAlert=true" variant="info" class="m-1">
       Show dismissible alert ({{showDismissibleAlert?'visible':'hidden'}})
     </b-btn>
+
+
+    <template>
+  <div>
+    <b-progress :value="counter" :max="max" show-progress animated></b-progress>
+    <b-progress class="mt-1" :max="max" show-value>
+      <b-progress-bar :value="counter*(6/10)" variant="success"></b-progress-bar>
+      <b-progress-bar :value="counter*(2.5/10)" variant="warning"></b-progress-bar>
+      <b-progress-bar :value="counter*(1.5/10)" variant="danger"></b-progress-bar>
+    </b-progress>
+    <b-btn class="mt-4" @click="clicked">Click me</b-btn>
+  </div>
+</template>
+
+
   </div>
 
 </template>
@@ -40,6 +55,8 @@
 export default {
   data () {
     return {
+      counter: 45,
+      max: 100,
       dismissSecs: 10,
       dismissCountDown: 0,
       showDismissibleAlert: false
