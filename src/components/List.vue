@@ -21,21 +21,22 @@
 
 <script>
 import axios from 'axios';
+//import VuejsDialog from "vuejs-dialog";
 
 export default {
   data () {
     return {
       fields: {
         name: {
-          label: 'name',
+          label: 'Nom',
           sortable: true
         },
         surname: {
-          label: 'surname',
+          label: 'Prénom',
           sortable: false
         },
         float: {
-          label: 'moyenne'
+          label: 'Moyenne'
         },
         'email': {
           label: 'e-mail'
@@ -48,7 +49,7 @@ export default {
       currentPage: 1
     }
   },
-  created() {
+  mounted() {
     const i = this.$route.params.id1 - 1;
     const j = this.$route.params.id2;
 
@@ -69,8 +70,8 @@ export default {
   routerLinkProfile(record) {
     this.$router.push({ path: this.$route.params.id2+'/profile/'+(record+1) });
   },
-  deleteProfile(record) {
-    const i = this.$route.params.id1 - 1;
+  deleteProfile(/*record*/) {
+    /*const i = this.$route.params.id1 - 1;
     const j = this.$route.params.id2;
 
     axios
@@ -81,7 +82,14 @@ export default {
         //console.log(data);
         axios.delete("http://localhost:3000/delete/"+camp+"/"+j+"/"+record);
         window.location.reload();
-      });
+      });*/
+      this.$dialog.confirm('Please confirm to continue')
+        .then(function () {
+          console.log('Clicked on proceed')
+        })
+        .catch(function () {
+          console.log('Clicked on cancel')
+        });
   },
   updateProfile(record){
     console.log("update "+record);

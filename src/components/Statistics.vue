@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <b-alert show>Default Alert</b-alert>
+  <div class="small">
+    <h1><center> Statistiques des campus </center></h1>
+    <!-- b-alert show>Default Alert</b-alert>
 
     <b-alert variant="success" show>Success Alert</b-alert>
 
@@ -29,29 +30,23 @@
     </b-btn>
     <b-btn @click="showDismissibleAlert=true" variant="info" class="m-1">
       Show dismissible alert ({{showDismissibleAlert?'visible':'hidden'}})
-    </b-btn>
+    </b-btn -->
 
+  <column-chart id="columnchart" :data="[['camp1', 32], ['camp2', 46], ['camp3', 28], ['camp4', 38], ['camp5', 50]]"></column-chart>
 
-    <template>
-  <div>
-    <b-progress :value="counter" :max="max" show-progress animated></b-progress>
-    <b-progress class="mt-1" :max="max" show-value>
-      <b-progress-bar :value="counter*(6/10)" variant="success"></b-progress-bar>
-      <b-progress-bar :value="counter*(2.5/10)" variant="warning"></b-progress-bar>
-      <b-progress-bar :value="counter*(1.5/10)" variant="danger"></b-progress-bar>
-    </b-progress>
-    <b-btn class="mt-4" @click="clicked">Click me</b-btn>
-  </div>
-</template>
+  <pie-chart id="piechart" :data="[['camp1', 44], ['camp2', 23], ['camp3', 19], ['camp4', 5], ['camp5', 20]]"></pie-chart>
 
+  <line-chart id="linechart" :data="{'uf1': 2, 'uf2': 5, 'uf3': 7, 'uf4': 3, 'uf5': 6, 'uf6': 2, 'uf7': 5}"></line-chart>
 
   </div>
-
 </template>
 
 <!-- ============================================================================ -->
 
 <script>
+import 'vue-chartkick';
+import 'chart.js';
+
 export default {
   data () {
     return {
@@ -75,6 +70,26 @@ export default {
 
 <!-- ============================================================================ -->
 
-<style scoped>
-
+<style>
+#linechart{
+  max-width: 950px;
+  max-height: 200px;
+  position:absolute;
+  top: 65%;
+  left: 12%;
+}
+#columnchart{
+  max-width: 500px;
+  max-height: 250px;
+  position:absolute;
+  top: 20%;
+  left: 12%;
+}
+#piechart{
+  max-width: 300px;
+  max-height: 250px;
+  position:absolute;
+  top: 20%;
+  left: 64%;
+}
 </style>
