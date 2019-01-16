@@ -11,8 +11,6 @@
       <b-button size="sm" variant="primary" @click.stop="updateProfile(row.index)" title="Mettre à jour">Modifier</b-button>
     </template>
   </b-table>
-  <b-pagination size="md" v-model="currentPage" :per-page="10">
-    </b-pagination>
   </div>
 
 </template>
@@ -21,7 +19,6 @@
 
 <script>
 import axios from 'axios';
-//import VuejsDialog from "vuejs-dialog";
 
 export default {
   data () {
@@ -78,18 +75,9 @@ export default {
       .get("http://localhost:3000/data/campus")
       .then(response => {
         let camp = response.data[i].name.split(" ")[response.data[i].name.split(" ").length - 1].toLowerCase();
-        //var data = {campus: camp, uf: j, student: record};
-        //console.log(data);
         axios.delete("http://localhost:3000/delete/"+camp+"/"+j+"/"+record);
         window.location.reload();
       });
-      /*this.$dialog.confirm('Please confirm to continue')
-        .then(function () {
-          console.log('Clicked on proceed')
-        })
-        .catch(function () {
-          console.log('Clicked on cancel')
-        });*/
   },
   updateProfile(record){
     console.log("update "+record);

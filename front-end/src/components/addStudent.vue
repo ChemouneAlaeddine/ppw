@@ -75,12 +75,10 @@ export default {
     },
     onReset (evt) {
       evt.preventDefault();
-      /* Reset our form values */
       this.student.email = '';
       this.student.name = '';
       this.student.surname = '';
       this.student.float = 0;
-      /* Trick to reset/clear native browser form validation state */
       this.show = false;
       this.$nextTick(() => { this.show = true });
     }

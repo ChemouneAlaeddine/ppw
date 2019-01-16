@@ -26,7 +26,7 @@ export default {
       .then(response => {
         var campus = response.data;
         for (let i=0; i< campus.length; i++) {
-            let webPage = "/fac/"+campus[i].index;
+            let webPage = "/ufs/"+campus[i].index;
             L.marker([campus[i].longitude, campus[i].laltitude]).on('click', function markerOnClick(){location.href = webPage;}).addTo(mapid).bindPopup("<a href="+webPage+">"+campus[i].name+"</a>", {autoClose:false}).openPopup(); 
         }
       });

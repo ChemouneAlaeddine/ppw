@@ -1,42 +1,13 @@
 <template>
-  <div class="small">
-    <h1><center> Statistiques des campus </center></h1>
-    <!-- b-alert show>Default Alert</b-alert>
+  <div>
+  <h1><center> Statistiques des campus </center></h1>
 
-    <b-alert variant="success" show>Success Alert</b-alert>
+  <column-chart id="columnchart" title="Effectif des campus" :data="campData"></column-chart>
+  
+  <pie-chart id="piechart" title="Effectif des campus" :data="campData"></pie-chart>
 
-    <b-alert variant="danger"
-             dismissible
-             :show="showDismissibleAlert"
-             @dismissed="showDismissibleAlert=false">
-      Dismissible Alert!
-    </b-alert>
-
-    <b-alert :show="dismissCountDown"
-             dismissible
-             variant="warning"
-             @dismissed="dismissCountDown=0"
-             @dismiss-count-down="countDownChanged">
-      <p>This alert will dismiss after {{dismissCountDown}} seconds...</p>
-      <b-progress variant="warning"
-                  :max="dismissSecs"
-                  :value="dismissCountDown"
-                  height="4px">
-      </b-progress>
-    </b-alert>
-
-    <b-btn @click="showAlert" variant="info" class="m-1">
-      Show alert with count-down timer
-    </b-btn>
-    <b-btn @click="showDismissibleAlert=true" variant="info" class="m-1">
-      Show dismissible alert ({{showDismissibleAlert?'visible':'hidden'}})
-    </b-btn -->
-
-  <column-chart id="columnchart" :data="campData"></column-chart>
-
-  <pie-chart id="piechart" :data="campData"></pie-chart>
-
-  <line-chart id="linechart" :data="campData"></line-chart>
+  <line-chart id="linechart" title="Taux de réussite" :data="succData"></line-chart>
+  
   </div>
 </template>
 
@@ -45,22 +16,20 @@
 <script>
 import 'vue-chartkick';
 import 'chart.js';
-import axios from 'axios';
+//import axios from 'axios';
 
 export default {
   data () {
     return {
-      /*counter: 45,
-      max: 100,
-      dismissSecs: 10,
-      dismissCountDown: 0,
-      showDismissibleAlert: false,*/
-      allData: [],
-      campData: []
+      // Static data
+      succData:[['Campus Talence', 554],['Campus Victoire', 380],['Campus Carreire', 350],['Campus Pessac', 413],['Campus de la Bastide', 285]],
+
+      campData:[['Campus Talence', 854],['Campus Victoire', 424],['Campus Carreire', 459],['Campus Pessac', 482],['Campus de la Bastide', 355]]
     }
   },
   mounted() {
-      axios
+    //================================= await problem ==========================================
+      /*axios
       .get("http://localhost:3000/data/campus")
       .then(response => {
         let idx = 0;
@@ -86,9 +55,7 @@ export default {
           this.campData[idx] = elem_camp;
           this.allData[idx++] = elem;
         }
-        console.log(this.allData);
-        console.log(this.campData);
-      });
+      });*/
   },
   methods: {
     countDownChanged (dismissCountDown) {
@@ -105,24 +72,24 @@ export default {
 
 <style>
 #linechart{
-  max-width: 950px;
-  max-height: 200px;
+  max-width: 980px;
+  max-height: 250px;
   position:absolute;
-  top: 65%;
-  left: 12%;
+  top: 58%;
+  left: 15%;
 }
 #columnchart{
   max-width: 600px;
   max-height: 250px;
   position:absolute;
-  top: 20%;
+  top: 18%;
   left: 12%;
 }
 #piechart{
   max-width: 300px;
   max-height: 250px;
   position:absolute;
-  top: 20%;
+  top: 18%;
   left: 64%;
 }
 </style>

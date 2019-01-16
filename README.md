@@ -18,11 +18,15 @@ Une API web qui permet de gérer l'ensemble des campus et UF's de l'enseignement
 ## Lancement du serveur back-end/
 
 npm run start
+```
+
 * serveur lancé sur localhost:3000
 
 ## Lancement de l'API front-end/
 
 npm run serve
+```
+
 * API lancé sur localhost:8080
 
 ## Project setup

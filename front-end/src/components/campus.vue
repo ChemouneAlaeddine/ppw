@@ -32,7 +32,7 @@ export default {
   },
   methods: {
   routerLinkToDetails(index) {
-    this.$router.push({ path: '/fac/'+(index+1) });
+    this.$router.push({ path: '/ufs/'+(index+1) });
   }
   }
 }
