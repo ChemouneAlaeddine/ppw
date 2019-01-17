@@ -1,7 +1,7 @@
   <template>
   <div id="nav">
     <b-navbar toggleable="md" type="dark" variant="info">
-      <b-navbar-brand href="/Home">Accueil</b-navbar-brand>
+      <b-navbar-brand href="/">Accueil</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item-dropdown text="Liste">

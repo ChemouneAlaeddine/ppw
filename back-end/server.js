@@ -50,7 +50,7 @@ app.get('/data/:id', function(req, res) {
       let collection = db.collection(req.params.id);
 
 			// Find all students
-			await collection.find({}).toArray(function (err, result) {
+			collection.find({}).toArray(function (err, result) {
 				if (err) {
 					res.send(err);
 				} else if (result.length) {
@@ -133,29 +133,6 @@ app.put('/put/:camp?/:uf?/:record?/', function(req, res){
       });
     }
   });
-});
-//======================================================================================================
-//========================================= Login/Logout ===============================================
-//const ticketRoutes = express.Router();
-var auth = {
-  authenticated: false,
-                mockAccount: {
-                    username: "admin",
-                    password: "admin"
-                  }
-                };
-app.get('/login', function(req, res){
-  // Connect to the server
-  res.send(""+auth.authenticated);
-});
-app.post('/login', function(req, res){
-  // Connect to the server
-  console.log(req.body);
-  if(req.body == auth.mockAccount)
-    auth.authentified = true;
-});
-app.post('/logout', function(){
-  auth.authentified = false;
 });
 //======================================================================================================
 

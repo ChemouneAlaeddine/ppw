@@ -19,8 +19,6 @@ mongo.connect(ourData2 , function(error , db){
 			fs.readdir(testFolder, function(err, files){
 				if(err) throw err;
 				files.forEach(function(file){
-					/*dbase.createCollection(file , function(err){*/
-						//if(err) throw err;
 
 						//================== json files =====================
 						var folderCollection = './data/'+file;
@@ -55,8 +53,6 @@ mongo.connect(ourData2 , function(error , db){
                                 });
                             });
 						}
-						//===================================================
-					/*});*/
 				});
 			});
 			console.log("DB created successfully");
