@@ -6,7 +6,7 @@
   
   <pie-chart id="piechart" title="Effectif des campus" :data="campData"></pie-chart>
 
-  <line-chart id="linechart" title="Taux de réussite" :data="succData"></line-chart>
+  <line-chart id="linechart" title="Taux de réussite" :data="campData"></line-chart>
   
   </div>
 </template>
@@ -16,22 +16,23 @@
 <script>
 import 'vue-chartkick';
 import 'chart.js';
-//import axios from 'axios';
+import axios from 'axios';
 
 export default {
   data () {
     return {
       // Static data
-      succData:[['Campus Talence', 554],['Campus Victoire', 380],['Campus Carreire', 350],['Campus Pessac', 413],['Campus de la Bastide', 285]],
+      succData:[["Campus Talence", 601],["Campus Victoire", 348],["Campus Carreire", 420],["Campus Pessac", 350],["Campus de la Bastide", 324]],
 
-      campData:[['Campus Talence', 854],['Campus Victoire', 424],['Campus Carreire', 459],['Campus Pessac', 482],['Campus de la Bastide', 355]]
+      allData: [],
+
+      campData:[["Campus Talence", 853],["Campus Victoire", 422],["Campus Carreire", 459],["Campus Pessac", 482],["Campus de la Bastide", 355]]
     }
   },
   mounted() {
     //================================= await problem ==========================================
       /*axios
-      .get("http://localhost:3000/data/campus")
-      .then(response => {
+      .get("http://localhost:3000/data/campus").then(response => {
         let idx = 0;
         for(let i=0; i<response.data.length; i++){
           let camp = response.data[i].name.split(" ")[response.data[i].name.split(" ").length - 1].toLowerCase();
@@ -55,6 +56,7 @@ export default {
           this.campData[idx] = elem_camp;
           this.allData[idx++] = elem;
         }
+        console.log(this.campData);
       });*/
   },
   methods: {
@@ -64,8 +66,9 @@ export default {
     showAlert () {
       this.dismissCountDown = this.dismissSecs
     }
+    },
   }
-}
+
 </script>
 
 <!-- ============================================================================ -->

@@ -1,12 +1,12 @@
 var mongo = require('mongodb');
 
 // Création de la BDD
-var ourData2 = "mongodb://localhost:27017/ourData";
+var ourData2 = "mongodb://localhost:27017/ourData2";
 
 mongo.connect(ourData2 , function(error , db){
 	if (error){throw error;}
 	
-	var dbase = db.db("ourData");
+	var dbase = db.db("ourData2");
 
 	dbase.listCollections().toArray(function(err, items){
 		if (err) throw err;

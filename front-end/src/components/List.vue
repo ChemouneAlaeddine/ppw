@@ -80,7 +80,7 @@ export default {
       });
   },
   updateProfile(record){
-    console.log("update "+record);
+    this.$router.push({ path: this.$route.params.id2+'/update/'+record});
   },
   newProfile(){
     this.$router.push({ path: this.$route.params.id2+'/form'});

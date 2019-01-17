@@ -9,6 +9,7 @@ app.use(morgan('combined'));
 
 //CORS
 app.use(function(req, res, next) {
+
   res.header("Access-Control-Allow-Origin", "http://localhost:8080");
   res.header("Access-Control-Allow-Methods", "POST,GET,PUT,DELETE,OPTIONS");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -38,7 +39,7 @@ var url = 'mongodb://localhost:27017/ourData';
 //======================================= Data JSON files =============================================
 app.get('/data/:id', function(req, res) {
 	// Connect to the server
-	MongoClient.connect(url, function (err, db) {
+	MongoClient.connect(url, async function (err, db) {
 		if (err) {
 			console.log('Unable to connect to the Server', err);
 		} else {
@@ -46,10 +47,10 @@ app.get('/data/:id', function(req, res) {
 			console.log('Connection established to', url);
 
 			// Get the documents collection
-      var collection = db.collection(req.params.id);
+      let collection = db.collection(req.params.id);
 
 			// Find all students
-			collection.find({}).toArray(function (err, result) {
+			await collection.find({}).toArray(function (err, result) {
 				if (err) {
 					res.send(err);
 				} else if (result.length) {
@@ -108,7 +109,33 @@ app.delete('/delete/:camp?/:uf?/:record?/', function(req, res){
   });
 });
 //======================================================================================================
-//============================================ Login/Logout ====================================================
+//=========================================== Put ===================================================
+app.put('/put/:camp?/:uf?/:record?/', function(req, res){
+  MongoClient.connect(url, function(err, db){
+    if (err) {
+      console.log('Unable to connect to the Server:', err);
+    } else {
+      console.log('Connected to Server');
+      // Get the documents collection
+      var collection = db.collection(req.param("camp")+'_'+req.param("uf"));
+      collection.find({}).toArray(function(err, collArray) {
+        if (err) throw err;
+        collection.remove(collArray[req.param("record")]);
+        let student1 = {
+          "index": req.param("record"),
+          "name": req.body.name,
+          "surname": req.body.surname,
+          "email": req.body.email,
+          "fullname": req.body.fullname,
+          "float": req.body.float
+        };
+        collection.insert([student1]);
+      });
+    }
+  });
+});
+//======================================================================================================
+//========================================= Login/Logout ===============================================
 //const ticketRoutes = express.Router();
 var auth = {
   authenticated: false,

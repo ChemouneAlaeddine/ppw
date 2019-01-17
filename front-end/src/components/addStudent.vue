@@ -26,7 +26,7 @@
       </div>
   
       <button type="submit" class="btn btn-primary">Valider</button>
-      <button type="reset" class="btn btn-primary" @click="onReset">Reset</button>
+      <button type="reset" class="btn btn-primary" @click="onReset">Annuler</button>
     </form>
   </div>
 </template>
@@ -72,6 +72,7 @@ export default {
       }
       axios
         .post('http://localhost:3000/add', newStudent);
+      window.location.reload();
     },
     onReset (evt) {
       evt.preventDefault();

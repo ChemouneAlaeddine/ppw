@@ -20,7 +20,6 @@
             <template slot="button-content">
               <em>Utilisateur</em>
             </template>
-            <b-dropdown-item href="">Profile</b-dropdown-item>
             <b-dropdown-item @click.stop="logout" href="">Déconnexion</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
