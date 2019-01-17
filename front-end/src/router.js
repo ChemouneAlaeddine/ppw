@@ -1,4 +1,4 @@
-import Vue from 'vue'
+//import Vue from 'vue'
 import Router from 'vue-router';
 import HomePage from './components/HomePage.vue';
 import List from './components/List.vue';
@@ -8,26 +8,27 @@ import ufs from './components/ufs.vue';
 import profile from './components/profile.vue';
 import Form from './components/addStudent.vue';
 import Form2 from './components/updateStudent.vue';
-//import LoginComponent from './components/login.vue';
+import LoginComponent from './components/login.vue';
 
-Vue.use(Router)
+import axios from 'axios';
+
 let router = new Router({
 	mode: 'history',
 	routes: [
-		/*{path: '/', 
-	/*redirect: {
-		name: "login"
-	}
-},*/
-	//component: HomePage},
+		
 	{path: '/', 
 		name: "Home",
 		component: HomePage
 	},
+	{
+		path: '/login', 
+		name: "login",
+		component: LoginComponent
+	},
+
 	{path: '/Home',
 		name: 'Home',
 		component: HomePage
-		
 	},
 	{path: '/ufs/:id1?/list/:id2?', component: List},
 	{path: '/campus', component: Campus},
@@ -46,9 +47,15 @@ router.beforeEach((to, from, next) => {
 	if(to.matched.some(record => record.meta.requiresAuth)) {
 			next({
 				path: '/login',
-				//params: { nextUrl: to.fullPath }
 			})
-		
+} else if(to.matched.some(record => record.meta.guest)) {
+	if(localStorage.getItem('jwt') == null){
+		next()
+	} else{
+		next({ name: 'Home'})
+	}
+}else {
+next() 
 }
 })
 export default router
