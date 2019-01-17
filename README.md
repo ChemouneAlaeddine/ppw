@@ -4,7 +4,7 @@ Une API web qui permet de gérer l'ensemble des campus et UF's de l'enseignement
 
 ## Description
 
-* [VueJS](https://app.swaggerhub.com/apis/badrf/Map/1.0.0) - La description Swagger de l'API.
+* [SwaggerHub](https://app.swaggerhub.com/apis/badrf/Map/1.0.0) - La description Swagger de l'API.
 
 * Le projet consiste initialement à afficher une Map pour définir les campus de l'université de Bordeaux et l'affectation des étudiants sur les UF's des campus.
 
@@ -18,14 +18,14 @@ Une API web qui permet de gérer l'ensemble des campus et UF's de l'enseignement
 * [ExpressJS](https://expressjs.com/fr/) - Serveur Back-End
 
 ## Lancement du serveur back-end/
-
+```
 npm run start
 ```
 
 * serveur lancé sur localhost:3000
 
 ## Lancement de l'API front-end/
-
+```
 npm run serve
 ```
 
